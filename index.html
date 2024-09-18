@@ -26,8 +26,8 @@
             z-index: 1000;
         }
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            width: 200px;
+            height: 60px;
         }
         nav ul {
             display: flex;
@@ -66,7 +66,7 @@
             color: #333;
             position: relative;
             z-index: 2;
-            padding-top: 60px; /* To account for the fixed header */
+            padding-top: 60px;
         }
         .section {
             padding: 4rem 2rem;
@@ -142,7 +142,16 @@
 </head>
 <body>
     <header>
-        <div class="logo">MWM</div>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+                <rect width="200" height="60" fill="#1a1a2e"/>
+                <text x="10" y="40" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white">MWM</text>
+                <text x="10" y="55" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">RESEARCH</text>
+                <path d="M150 10 L170 30 L160 40 L140 20 Z" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+                <path d="M160 10 L180 30 L170 40 L150 20 Z" fill="none" stroke="#4ecdc4" stroke-width="2"/>
+                <path d="M170 10 L190 30 L180 40 L160 20 Z" fill="none" stroke="#45b7d1" stroke-width="2"/>
+            </svg>
+        </div>
         <nav>
             <ul>
                 <li><a href="#hero">Home</a></li>
