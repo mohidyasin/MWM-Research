@@ -11,32 +11,41 @@
             font-family: Arial, sans-serif;
             scroll-behavior: smooth;
         }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #1a1a2e;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
         #particles-js {
             position: absolute;
             width: 100%;
             height: 100vh;
             background-color: #1a1a2e;
-        }
-        nav {
-            position: fixed;
-            width: 100%;
-            background-color: rgba(26, 26, 46, 0.8);
-            padding: 1rem 0;
-            z-index: 1000;
-        }
-        nav ul {
-            display: flex;
-            justify-content: flex-end;
-            list-style-type: none;
-            margin: 0;
-            padding: 0 20px;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
         }
         .hero {
             height: 100vh;
@@ -56,6 +65,7 @@
             color: #333;
             position: relative;
             z-index: 2;
+            padding-top: 60px; /* To account for the fixed header */
         }
         .section {
             padding: 4rem 2rem;
@@ -106,18 +116,42 @@
             height: 100%;
             border: none;
         }
+        .contact-form {
+            display: grid;
+            gap: 1rem;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #1a1a2e;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #2a2a4e;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#philosophy">Philosophy</a></li>
-            <li><a href="#offerings">Offerings</a></li>
-            <li><a href="#dashboards">Dashboards</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="logo">MWM</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#offerings">Offerings</a></li>
+                <li><a href="#dashboards">Dashboards</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div id="hero" class="hero">
         <div id="particles-js"></div>
         <h1>Actively Managed Portfolio Solutions</h1>
@@ -154,6 +188,15 @@
                     <iframe src="https://placeholder-for-streamlit-dashboard-2.com" allowfullscreen></iframe>
                 </div>
             </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Interested?</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Name*" required>
+                <input type="email" name="email" placeholder="Email*" required>
+                <textarea name="message" placeholder="Your message" rows="4"></textarea>
+                <button type="submit">Let's Talk</button>
+            </form>
         </section>
     </div>
 
