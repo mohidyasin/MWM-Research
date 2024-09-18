@@ -11,6 +11,8 @@
             font-family: Arial, sans-serif;
             color: #ffffff;
             background-color: #1a1a2e;
+            height: 100%;
+            scroll-behavior: smooth;
         }
         #particles-js {
             position: fixed;
@@ -49,15 +51,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: rgba(26, 26, 46, 0.5);
         }
         h1 {
             font-size: 3rem;
             text-align: center;
         }
         .section {
+            min-height: 100vh;
             padding: 4rem 2rem;
             max-width: 800px;
             margin: 0 auto;
+            background-color: rgba(26, 26, 46, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         h2 {
             font-size: 2.5rem;
@@ -81,20 +89,41 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
+        .dashboard-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .dashboard {
+            flex: 1 1 45%;
+            min-width: 300px;
+            height: 500px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dashboard iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
     <nav>
         <ul>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#philosophy">Philosophy</a></li>
             <li><a href="#offerings">Offerings</a></li>
-            <li><a href="#join">Join</a></li>
+            <li><a href="#dashboards">Dashboards</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="content">
-        <div class="hero">
+        <div id="hero" class="hero">
             <h1>Actively Managed Portfolio Solutions</h1>
         </div>
         <section id="philosophy" class="section">
@@ -118,6 +147,17 @@
                 </div>
             </div>
         </section>
+        <section id="dashboards" class="section">
+            <h2>Our Dashboards</h2>
+            <div class="dashboard-container">
+                <div class="dashboard">
+                    <iframe src="https://placeholder-for-streamlit-dashboard-1.com" allowfullscreen></iframe>
+                </div>
+                <div class="dashboard">
+                    <iframe src="https://placeholder-for-streamlit-dashboard-2.com" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -125,7 +165,21 @@
         document.addEventListener('DOMContentLoaded', function() {
             if(typeof particlesJS !== 'undefined') {
                 particlesJS("particles-js", {
-                    // (Keep the existing particles.js configuration)
+                    "particles": {
+                        "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+                        "color": {"value": "#ffffff"},
+                        "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}, "polygon": {"nb_sides": 5}},
+                        "opacity": {"value": 0.5, "random": false, "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}},
+                        "size": {"value": 3, "random": true, "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}},
+                        "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
+                        "move": {"enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}}
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}, "resize": true},
+                        "modes": {"grab": {"distance": 400, "line_linked": {"opacity": 1}}, "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3}, "repulse": {"distance": 200, "duration": 0.4}, "push": {"particles_nb": 4}, "remove": {"particles_nb": 2}}
+                    },
+                    "retina_detect": true
                 });
             } else {
                 console.error("Particles.js library failed to load");
