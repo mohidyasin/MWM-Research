@@ -148,7 +148,7 @@
         #back-to-top {
             position: fixed;
             bottom: 20px;
-            left: 20px;
+            right: 20px;
             background-color: #1a1a2e;
             color: white;
             border: none;
@@ -162,9 +162,14 @@
             align-items: center;
             text-decoration: none;
             z-index: 1000;
+            transition: opacity 0.3s;
         }
         #back-to-top:hover {
             background-color: #2a2a4e;
+        }
+        #back-to-top.hidden {
+            opacity: 0;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -268,10 +273,28 @@
             }
         });
 
-        // Smooth scroll for the back to top button
-        document.getElementById('back-to-top').addEventListener('click', function(e) {
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        const footer = document.querySelector('footer');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+
+            const footerRect = footer.getBoundingClientRect();
+            if (footerRect.top < window.innerHeight) {
+                backToTopButton.classList.add('hidden');
+            } else {
+                backToTopButton.classList.remove('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
