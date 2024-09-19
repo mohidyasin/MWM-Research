@@ -26,8 +26,8 @@
             z-index: 1000;
         }
         .logo {
-            width: 200px;
-            height: 60px;
+            width: 300px;
+            height: 40px;
         }
         nav ul {
             display: flex;
@@ -143,13 +143,19 @@
 <body>
     <header>
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-                <rect width="200" height="60" fill="#1a1a2e"/>
-                <text x="10" y="40" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white">MWM</text>
-                <text x="10" y="55" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">RESEARCH</text>
-                <path d="M150 10 L170 30 L160 40 L140 20 Z" fill="none" stroke="#ff6b6b" stroke-width="2"/>
-                <path d="M160 10 L180 30 L170 40 L150 20 Z" fill="none" stroke="#4ecdc4" stroke-width="2"/>
-                <path d="M170 10 L190 30 L180 40 L160 20 Z" fill="none" stroke="#45b7d1" stroke-width="2"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+              <style>
+                .text { font-family: Arial, sans-serif; fill: white; }
+                .main-text { font-size: 24px; font-weight: bold; }
+                .sub-text { font-size: 12px; }
+              </style>
+              <text x="0" y="25" class="text main-text">MWM</text>
+              <text x="0" y="38" class="text sub-text">RESEARCH</text>
+              <g transform="translate(220, 0)">
+                <path d="M0 10 L10 0 L20 10 L10 20 Z" fill="#ff6b6b"/>
+                <path d="M10 0 L20 10 L30 0 L20 -10 Z" fill="#4ecdc4"/>
+                <path d="M20 10 L30 0 L40 10 L30 20 Z" fill="#45b7d1"/>
+              </g>
             </svg>
         </div>
         <nav>
