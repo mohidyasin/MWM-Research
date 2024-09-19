@@ -138,6 +138,34 @@
         .contact-form button:hover {
             background-color: #2a2a4e;
         }
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.8rem;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #1a1a2e;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            z-index: 1000;
+        }
+        #back-to-top:hover {
+            background-color: #2a2a4e;
+        }
     </style>
 </head>
 <body>
@@ -209,6 +237,10 @@
             </form>
         </section>
     </div>
+    <footer>
+        <p>Copyright©2024 MWM-RESEARCH.COM</p>
+    </footer>
+    <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
@@ -234,6 +266,12 @@
             } else {
                 console.error("Particles.js library failed to load");
             }
+        });
+
+        // Smooth scroll for the back to top button
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
 </body>
