@@ -205,7 +205,7 @@
             background-color: #2a2a4e;
         }
 
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
             header {
                 padding: 0.5rem 1rem;
                 flex-direction: row;
@@ -256,6 +256,31 @@
                 width: 100%;
             }
         }
+
+        /* Additional styles for the updated philosophy section */
+        .philosophy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .principles {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .principle {
+            margin-bottom: 15px;
+        }
+        .principle h3 {
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        .conclusion {
+            font-style: italic;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -287,12 +312,28 @@
     <div class="content">
         <section id="philosophy" class="section">
             <h2>Our Philosophy</h2>
-            <p>At MWM Research, we harness adaptive investment strategies to navigate modern financial markets. Our approach is built on three core principles:
-1.	Dynamic Management: We actively adjust our strategies to align with evolving market conditions, capitalizing on opportunities and mitigating risks in ways static strategies cannot.
-2.	Risk Mitigation: We aim to outperform traditional approaches while minimizing drawdowns and overall risk exposure, believing that preserving capital is as crucial as growing it.
-3.	Customized Solutions: We tailor our investment systems to each client's unique needs, offering flexibility in leverage, risk management stringency, and overall portfolio composition.
-This philosophy contrasts sharply with the "buy, hold, and rebalance" approach. We believe investors achieve superior results through dynamic management, surpassing traditional money managers or automated services that often fail to adapt to market shifts.
-.</p>
+            <div class="philosophy-content">
+                <p>At MWM Research, we harness adaptive investment strategies to navigate modern financial markets. Our approach is built on three core principles:</p>
+                
+                <div class="principles">
+                    <div class="principle">
+                        <h3>1. Dynamic Management</h3>
+                        <p>We actively adjust our strategies to align with evolving market conditions, capitalizing on opportunities and mitigating risks in ways static strategies cannot.</p>
+                    </div>
+                    
+                    <div class="principle">
+                        <h3>2. Risk Mitigation</h3>
+                        <p>We aim to outperform traditional approaches while minimizing drawdowns and overall risk exposure, believing that preserving capital is as crucial as growing it.</p>
+                    </div>
+                    
+                    <div class="principle">
+                        <h3>3. Customized Solutions</h3>
+                        <p>We tailor our investment systems to each client's unique needs, offering flexibility in leverage, risk management stringency, and overall portfolio composition.</p>
+                    </div>
+                </div>
+                
+                <p class="conclusion">This philosophy contrasts sharply with the "buy, hold, and rebalance" approach. We believe investors achieve superior results through dynamic management, surpassing traditional money managers or automated services that often fail to adapt to market shifts.</p>
+            </div>
         </section>
         <section id="offerings" class="section">
             <h2>Our Offerings</h2>
