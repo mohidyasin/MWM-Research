@@ -121,29 +121,18 @@
     </div>
 
     <script>
-        function formatValue(value, metric) {
-            const numValue = parseFloat(value);
-            if (metric === 'Cumulative Return' || metric === 'Max Drawdown') {
-                return (numValue * 100).toFixed(1) + '%';
-            } else if (metric === 'CAGR%' || metric === 'Volatility (ann.)') {
-                return numValue.toFixed(2) + '%';
-            } else {
-                return numValue.toFixed(2);
-            }
-        }
-
         function populateTable(data) {
             const table = document.getElementById('statsTable');
             data.forEach(row => {
-                if (row[0] !== 'Metric') {  // Skip header row
+                if (row[0] !== 'Metric' && row[0] !== '') {  // Skip header row and empty rows
                     const tr = table.insertRow();
                     const metricCell = tr.insertCell();
                     const strategyCell = tr.insertCell();
                     const buyHoldCell = tr.insertCell();
 
                     metricCell.textContent = row[0];
-                    strategyCell.textContent = formatValue(row[1], row[0]);
-                    buyHoldCell.textContent = formatValue(row[2], row[0]);
+                    strategyCell.textContent = row[1];
+                    buyHoldCell.textContent = row[2];
                 }
             });
         }
