@@ -184,50 +184,31 @@
 
         @media (max-width: 768px) {
             header {
-                padding: 0.5rem;
-                flex-direction: column;
+                padding: 0.25rem;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
             }
             .logo {
-                width: 100px;
-                height: 30px;
-                margin-bottom: 0.5rem;
+                width: 80px;
+                height: 24px;
+                margin-bottom: 0;
+            }
+            nav {
+                display: none; /* Hide navigation by default on mobile */
             }
             nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column;
+                align-items: flex-end;
             }
             nav ul li {
-                margin: 0.25rem 0.5rem;
+                margin: 0.25rem 0;
             }
             nav ul li a {
                 font-size: 0.9rem;
             }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .section {
-                padding: 2rem 1rem;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-            .offering-content {
-                flex-direction: column;
-            }
-            .offering-plot, .offering-details {
-                flex: 1;
-                max-width: 100%;
-                padding-left: 0;
-            }
-            .offering-plot {
-                margin-bottom: 1rem;
-            }
-            .stats-table {
-                font-size: 0.8rem;
-            }
-            .stats-table th, .stats-table td {
-                padding: 0.25rem;
+            .show-nav nav {
+                display: block; /* Show navigation when .show-nav class is present */
             }
         }
     </style>
@@ -235,7 +216,7 @@
 <body>
 <header>
     <div class="logo">
-        <a href="javascript:void(0);" onclick="location.reload();">
+        <a href="#hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
                 <style>
                     .main-text { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: white; }
@@ -316,88 +297,116 @@
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if(typeof particlesJS !== 'undefined') {
-                particlesJS("particles-js", {
-                    "particles": {
-                        "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-                        "color": {"value": "#ffffff"},
-                        "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}, "polygon": {"nb_sides": 5}},
-                        "opacity": {"value": 0.5, "random": false, "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}},
-                        "size": {"value": 3, "random": true, "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}},
-                        "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
-                        "move": {"enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}}
-                    },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}, "resize": true},
-                        "modes": {"grab": {"distance": 400, "line_linked": {"opacity": 1}}, "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3}, "repulse": {"distance": 200, "duration": 0.4}, "push": {"particles_nb": 4}, "remove": {"particles_nb": 2}}
-                    },
-                    "retina_detect": true
-                });
-            } else {
-                console.error("Particles.js library failed to load");
-            }
-        });
-
-        // Back to top button functionality
-        const backToTopButton = document.getElementById('back-to-top');
-        const footer = document.querySelector('footer');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'flex';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-
-            const footerRect = footer.getBoundingClientRect();
-            if (footerRect.top < window.innerHeight) {
-                backToTopButton.classList.add('hidden');
-            } else {
-                backToTopButton.classList.remove('hidden');
-            }
-        });
-
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Populate the stats tables
-        function populateTable(data, tableId) {
-            const table = document.getElementById(tableId);
-            data.forEach(row => {
-                if (row[0] !== 'Metric' && row[0] !== '') {  // Skip header row and empty rows
-                    const tr = table.insertRow();
-                    const metricCell = tr.insertCell();
-                    const strategyCell = tr.insertCell();
-                    const buyHoldCell = tr.insertCell();
-
-                    metricCell.textContent = row[0];
-                    strategyCell.textContent = row[1];
-                    buyHoldCell.textContent = row[2];
-                }
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if(typeof particlesJS !== 'undefined') {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+                    "color": {"value": "#ffffff"},
+                    "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}, "polygon": {"nb_sides": 5}},
+                    "opacity": {"value": 0.5, "random": false, "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}},
+                    "size": {"value": 3, "random": true, "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}},
+                    "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
+                    "move": {"enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}}
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}, "resize": true},
+                    "modes": {"grab": {"distance": 400, "line_linked": {"opacity": 1}}, "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3}, "repulse": {"distance": 200, "duration": 0.4}, "push": {"particles_nb": 4}, "remove": {"particles_nb": 2}}
+                },
+                "retina_detect": true
             });
+        } else {
+            console.error("Particles.js library failed to load");
         }
 
-        // Populate Long-Short table
-        Papa.parse('dashboard/docs/equity_portfolio_(long-short)_stats.csv', {
-            download: true,
-            complete: function(results) {
-                populateTable(results.data, 'longShortStatsTable');
-            }
-        });
+        // Header behavior
+        const header = document.querySelector('header');
+        const hero = document.getElementById('hero');
+        let isOnFrontPage = true;
 
-        // Populate Long-Only table
-        Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
-            download: true,
-            complete: function(results) {
-                populateTable(results.data, 'longOnlyStatsTable');
+        function updateHeaderVisibility() {
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            if (heroBottom <= 0) {
+                if (isOnFrontPage) {
+                    header.classList.remove('show-nav');
+                    isOnFrontPage = false;
+                }
+            } else {
+                if (!isOnFrontPage) {
+                    header.classList.add('show-nav');
+                    isOnFrontPage = true;
+                }
+            }
+        }
+
+        window.addEventListener('scroll', updateHeaderVisibility);
+
+        // Logo click handler
+        document.querySelector('.logo a').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            header.classList.add('show-nav');
+            isOnFrontPage = true;
+        });
+    });
+
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+    const footer = document.querySelector('footer');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.style.display = 'flex';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+
+        const footerRect = footer.getBoundingClientRect();
+        if (footerRect.top < window.innerHeight) {
+            backToTopButton.classList.add('hidden');
+        } else {
+            backToTopButton.classList.remove('hidden');
+        }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Populate the stats tables
+    function populateTable(data, tableId) {
+        const table = document.getElementById(tableId);
+        data.forEach(row => {
+            if (row[0] !== 'Metric' && row[0] !== '') {  // Skip header row and empty rows
+                const tr = table.insertRow();
+                const metricCell = tr.insertCell();
+                const strategyCell = tr.insertCell();
+                const buyHoldCell = tr.insertCell();
+
+                metricCell.textContent = row[0];
+                strategyCell.textContent = row[1];
+                buyHoldCell.textContent = row[2];
             }
         });
-    </script>
-</body>
-</html>
+    }
+
+    // Populate Long-Short table
+    Papa.parse('dashboard/docs/equity_portfolio_(long-short)_stats.csv', {
+        download: true,
+        complete: function(results) {
+            populateTable(results.data, 'longShortStatsTable');
+        }
+    });
+
+    // Populate Long-Only table
+    Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
+        download: true,
+        complete: function(results) {
+            populateTable(results.data, 'longOnlyStatsTable');
+        }
+    });
+</script>
