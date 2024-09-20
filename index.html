@@ -414,14 +414,20 @@
             console.error("Particles.js library failed to load");
         }
 
-        // Header behavior
-        const header = document.querySelector('header');
-        const hero = document.getElementById('hero');
+        // Navigation smooth scroll without changing URL
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                const section = document.getElementById(sectionId);
+                section.scrollIntoView({behavior: 'smooth'});
+            });
+        });
 
-        // Logo click handler
+        // Logo click handler - refresh page
         document.querySelector('.logo a').addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.location.href = '/';
         });
     });
 
@@ -511,3 +517,4 @@
         });
     });
 </script>
+
