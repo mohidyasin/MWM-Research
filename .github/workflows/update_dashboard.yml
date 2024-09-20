@@ -38,8 +38,9 @@ jobs:
       run: python dashboard/scripts/update_dashboard.py
 
     - name: Commit and push if changed
-      continue-on-error: true  # Avoid failure if no changes
       run: |
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
-        git diff --exit-code || (git add dashboard/docs && git commit -m "Update dashboard plots and metadata" && git push)
+        git add -f dashboard/docs
+        git commit -m "Update dashboard plots and metadata" || echo "No changes to commit"
+        git push || echo "No changes to push"
