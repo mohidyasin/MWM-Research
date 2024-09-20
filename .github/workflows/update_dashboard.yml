@@ -1,55 +1,45 @@
-name: Dashboard Update
+name: Update Dashboard
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *" # Runs every day at 8:00 AM UTC
+    - cron: '0 * * * *'  # Runs every hour (adjust as needed)
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   update-dashboard:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout the repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python environment
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
 
-      - name: Install required dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    - name: Clear pip cache (to avoid binary incompatibility)
+      run: pip cache purge
 
-      - name: Set up environment variables
-        env:
-          TV_USERNAME: ${{ secrets.TV_USERNAME }}
-          TV_PASSWORD: ${{ secrets.TV_PASSWORD }}
-          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: echo "Environment variables set."
+    - name: Install dependencies
+      run: |
+        set -e  # Exit on any error
+        python -m pip install --upgrade pip --no-cache-dir
+        pip install --no-cache-dir -r dashboard/requirements.txt
 
-      - name: Run the update script
-        run: python path_to_your_script/update_dashboard.py  # Adjust this path
+    - name: Verify installed packages
+      run: pip freeze
 
-      - name: Upload generated plots
-        uses: actions/upload-artifact@v3
-        with:
-          name: dashboard-plots
-          path: docs/*.png  # Assuming your PNGs are saved in the `docs` folder
+    - name: Run update script
+      env:
+        TV_USERNAME: ${{ secrets.TV_USERNAME }}
+        TV_PASSWORD: ${{ secrets.TV_PASSWORD }}
+        FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      run: python dashboard/scripts/update_dashboard.py
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Dashboard auto-update"
-          git push origin main
-        continue-on-error: true
-
-      - name: Save metadata
-        run: echo "Metadata saved."
+    - name: Commit and push if changed
+      continue-on-error: true  # Avoid failure if no changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git diff --exit-code || (git add dashboard/docs && git commit -m "Update dashboard plots and metadata" && git push)
