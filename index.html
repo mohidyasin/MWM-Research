@@ -101,10 +101,10 @@
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
+            margin: 1rem auto; /* Reduced from 2rem */
             overflow: hidden;
             max-width: 1400px;
-            width: 95%;
+            width: 97.5%; /* Increased from 95% */
         }
         .offering-card h3 {
             background-color: #1a1a2e;
@@ -117,15 +117,16 @@
         .offering-content {
             display: flex;
             flex-direction: column;
-            padding: 1.5rem;
+            padding: 0.75rem; /* Reduced from 1.5rem */
         }
         .offering-plot {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1300px; /* Increased from 1200px */
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 0.75rem; /* Reduced from 1.5rem */
             position: relative;
-            padding-bottom: 56.25%; /* This assumes a 16:9 aspect ratio. Adjust if different */
+            padding-bottom: 56.25%; /* Maintain aspect ratio */
             height: 0;
             overflow: hidden;
         }
