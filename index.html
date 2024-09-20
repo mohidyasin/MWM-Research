@@ -222,24 +222,6 @@
             background-color: #2a2a4e;
         }
 
-        @media (min-width: 769px) {
-            .offering-plot {
-                width: 100%;
-                max-width: 1200px;
-                margin-left: auto;
-                margin-right: auto;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .offering-plot img {
-                width: 100%;
-                height: auto;
-                display: block;
-                max-height: none;
-            }
-        }
-
         @media (max-width: 768px) {
             header {
                 padding: 0.5rem 1rem;
@@ -279,6 +261,10 @@
             }
             h2 {
                 font-size: 2rem;
+            }
+            .offering-plot img {
+                max-height: none;
+                margin-bottom: 1rem;
             }
             .stats-table {
                 font-size: 0.8rem;
@@ -365,7 +351,7 @@
             <div class="offering-card">
                 <h3>Adaptive Long/Short Strategy</h3>
                 <div class="offering-content">
-                    <div class="offering-plot" id="longShortPlot">
+                    <div class="offering-plot">
                         <img src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
                     </div>
                     <div class="table-container">
@@ -386,7 +372,7 @@
             <div class="offering-card">
                 <h3>Dynamic Equity Long-Only Strategy</h3>
                 <div class="offering-content">
-                    <div class="offering-plot" id="longOnlyPlot">
+                    <div class="offering-plot">
                         <img src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
                     </div>
                     <div class="table-container">
@@ -424,7 +410,7 @@
             </form>
         </section>
     </div>
-    <footer>
+<footer>
         <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved.</p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
@@ -469,27 +455,6 @@
             e.preventDefault();
             window.location.href = '/';
         });
-
-        // Dynamic plot sizing for desktop
-        if (window.innerWidth >= 769) {
-            fetch('dashboard/docs/metadata.json')
-                .then(response => response.json())
-                .then(metadata => {
-                    const longShortPlot = document.getElementById('longShortPlot');
-                    const longOnlyPlot = document.getElementById('longOnlyPlot');
-                    const longShortDimensions = metadata.plot_dimensions.long_short;
-                    const longOnlyDimensions = metadata.plot_dimensions.long_only;
-
-                    const setPlotAspectRatio = (plot, dimensions) => {
-                        const aspectRatio = (dimensions.height / dimensions.width) * 100;
-                        plot.style.paddingBottom = `${aspectRatio}%`;
-                    };
-
-                    setPlotAspectRatio(longShortPlot, longShortDimensions);
-                    setPlotAspectRatio(longOnlyPlot, longOnlyDimensions);
-                })
-                .catch(error => console.error('Error loading metadata:', error));
-        }
     });
 
     // Back to top button functionality
