@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MWM Research</title>
+    <title>MWM Research - Our Offerings</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
     <style>
         body, html {
@@ -12,13 +12,20 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
         }
+        .main-title {
+            text-align: center;
+            color: #1a1a2e;
+            padding: 2rem 0;
+            font-size: 2.5rem;
+        }
         .offering-card {
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 2rem auto;
             overflow: hidden;
-            max-width: 1200px;
+            max-width: 1400px; /* Increased max-width */
+            width: 95%;
         }
         .offering-card h2 {
             background-color: #1a1a2e;
@@ -26,14 +33,15 @@
             margin: 0;
             padding: 1rem;
             font-size: 1.5rem;
+            text-align: center;
         }
         .offering-content {
             display: flex;
             padding: 1rem;
         }
         .offering-plot {
-            flex: 0 0 60%;
-            max-width: 60%;
+            flex: 0 0 65%; /* Increased plot size */
+            max-width: 65%;
         }
         .offering-plot img {
             width: 100%;
@@ -41,11 +49,12 @@
             border-radius: 4px;
         }
         .offering-details {
-            flex: 0 0 40%;
+            flex: 0 0 35%;
             padding: 0 1rem;
         }
         .offering-details p {
             margin-top: 0;
+            font-size: 0.9rem;
         }
         .stats-table {
             width: 100%;
@@ -61,7 +70,7 @@
         .stats-table th {
             background-color: #f2f2f2;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .offering-content {
                 flex-direction: column;
             }
@@ -73,6 +82,7 @@
     </style>
 </head>
 <body>
+    <h1 class="main-title">Our Offerings</h1>
     <div class="offering-card">
         <h2>Equity Portfolio Performance (Long-Only)</h2>
         <div class="offering-content">
