@@ -42,7 +42,6 @@
         .offering-plot {
             flex: 0 0 65%;
             max-width: 65%;
-            padding-right: 1rem; /* Add right padding to the plot */
         }
         .offering-plot img {
             width: 100%;
@@ -51,7 +50,7 @@
         }
         .offering-details {
             flex: 0 0 35%;
-            padding: 0 1rem; /* Add left and right padding to the details */
+            padding-left: 1rem; /* Add left padding to create space between plot and details */
         }
         .offering-details p {
             margin-top: 0;
@@ -78,10 +77,10 @@
             .offering-plot, .offering-details {
                 flex: 0 0 100%;
                 max-width: 100%;
-                padding: 0 1rem; /* Add consistent padding for mobile view */
             }
-            .offering-plot {
-                margin-bottom: 1rem; /* Add space between plot and details in mobile view */
+            .offering-details {
+                padding-left: 0;
+                margin-top: 1rem;
             }
         }
     </style>
