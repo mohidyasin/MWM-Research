@@ -122,19 +122,17 @@
         .offering-plot {
             width: 100%;
             margin-bottom: 1.5rem;
-            height: 600px; /* Increased height for desktop */
         }
         .offering-plot img {
             width: 100%;
-            height: 100%;
+            height: auto;
             border-radius: 4px;
+            max-height: 500px;
             object-fit: contain;
         }
         .table-container {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            max-width: 800px; /* Reduced width for desktop */
-            margin: 0 auto;
         }
         .stats-table {
             width: 100%;
@@ -264,24 +262,18 @@
             h2 {
                 font-size: 2rem;
             }
-            .offering-plot {
-                height: 400px; /* Increased height for mobile */
-            }
             .offering-plot img {
                 max-height: none;
                 margin-bottom: 1rem;
             }
             .stats-table {
-                font-size: 0.7rem; /* Reduced font size for mobile */
+                font-size: 0.8rem;
             }
             .stats-table th, .stats-table td {
-                padding: 0.2rem; /* Reduced padding for mobile */
+                padding: 0.3rem;
             }
             .offering-content {
                 padding: 1rem;
-            }
-            .table-container {
-                max-width: 100%; /* Full width on mobile */
             }
         }
 
