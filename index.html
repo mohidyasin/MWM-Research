@@ -234,11 +234,22 @@
 
             .offering-plot img {
                 width: 100%;
-                height: auto;
-                display: block;
-                max-height: none;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
             }
         }
+            .offering-content {
+                display: flex;
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem; /* This creates a small space between elements */
+            }
+            .table-container {
+                margin-top: 1rem; /* Reduced space between plot and table */
+            }
 
         @media (max-width: 768px) {
             header {
@@ -485,27 +496,29 @@
             window.location.href = '/';
         });
 
-        // Dynamic plot sizing for desktop
-        if (window.innerWidth >= 769) {
-            fetch('dashboard/docs/metadata.json')
-                .then(response => response.json())
-                .then(metadata => {
-                    const longShortPlot = document.getElementById('longShortPlot');
-                    const longOnlyPlot = document.getElementById('longOnlyPlot');
-                    const longShortDimensions = metadata.plot_dimensions.long_short;
-                    const longOnlyDimensions = metadata.plot_dimensions.long_only;
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth >= 769) {
+        fetch('dashboard/docs/metadata.json')
+            .then(response => response.json())
+            .then(metadata => {
+                const longShortPlot = document.getElementById('longShortPlot');
+                const longOnlyPlot = document.getElementById('longOnlyPlot');
+                const longShortDimensions = metadata.plot_dimensions.long_short;
+                const longOnlyDimensions = metadata.plot_dimensions.long_only;
 
-                    const setPlotAspectRatio = (plot, dimensions) => {
-                        const aspectRatio = (dimensions.height / dimensions.width) * 100;
-                        plot.style.paddingBottom = `${aspectRatio}%`;
-                    };
+                const setPlotAspectRatio = (plot, dimensions) => {
+                    const aspectRatio = (dimensions.height / dimensions.width) * 100;
+                    const reducedAspectRatio = aspectRatio * 0.7; // Reduce height by 30%
+                    plot.style.paddingBottom = `${reducedAspectRatio}%`;
+                };
 
-                    setPlotAspectRatio(longShortPlot, longShortDimensions);
-                    setPlotAspectRatio(longOnlyPlot, longOnlyDimensions);
-                })
-                .catch(error => console.error('Error loading metadata:', error));
-        }
-    });
+                setPlotAspectRatio(longShortPlot, longShortDimensions);
+                setPlotAspectRatio(longOnlyPlot, longOnlyDimensions);
+            })
+            .catch(error => console.error('Error loading metadata:', error));
+    }
+});
 
     // Back to top button functionality
     const backToTopButton = document.getElementById('back-to-top');
