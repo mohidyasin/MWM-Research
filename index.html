@@ -107,33 +107,26 @@
     }
     .offering-content {
         display: flex;
+        flex-direction: column;
         padding: 1rem;
     }
     .offering-plot {
-        flex: 0 0 65%;
-        max-width: 65%;
+        width: 100%;
+        margin-bottom: 1rem;
     }
     .offering-plot img {
         width: 100%;
         height: auto;
         border-radius: 4px;
     }
-    .offering-details {
-        flex: 0 0 35%;
-        padding-left: 1rem;
-    }
-    .offering-details-inner {
-        width: 100%;
-    }
     .offering-details p {
         margin-top: 0;
         font-size: 0.9rem;
-        padding-right: 1rem;
+        margin-bottom: 1rem;
     }
     .stats-table {
-        width: calc(100% - 1rem);
+        width: 100%;
         border-collapse: collapse;
-        margin-top: 1rem;
         font-size: 0.9rem;
     }
     .stats-table th, .stats-table td {
@@ -211,32 +204,6 @@
         .show-nav nav {
             display: flex;
         }
-        
-        /* Adjust offering card layout for mobile */
-        .offering-content {
-            flex-direction: column;
-        }
-        .offering-plot, .offering-details {
-            flex: 1;
-            max-width: 100%;
-            padding-left: 0;
-        }
-        .offering-plot {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        .offering-plot img {
-            max-width: none;
-            width: auto;
-            height: 300px; /* Adjust this value as needed */
-        }
-        .stats-table {
-            font-size: 0.7rem;
-            width: 100%;
-        }
-        .stats-table th, .stats-table td {
-            padding: 0.2rem;
-        }
         .hero h1 {
             font-size: 2rem;
         }
@@ -245,6 +212,26 @@
         }
         h2 {
             font-size: 2rem;
+        }
+        .offering-content {
+            flex-direction: column;
+        }
+        .offering-plot {
+            width: 100%;
+            max-width: none;
+            margin-bottom: 1rem;
+        }
+        .offering-plot img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+        }
+        .stats-table {
+            font-size: 0.8rem;
+        }
+        .stats-table th, .stats-table td {
+            padding: 0.3rem;
         }
     }
 </style>
