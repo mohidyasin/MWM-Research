@@ -50,18 +50,18 @@
         }
         .offering-details {
             flex: 0 0 35%;
-            padding-left: 1rem; /* Add left padding to create space between plot and details */
+            padding-left: 1rem; /* Space between plot and details */
         }
         .offering-details-inner {
-            max-width: calc(100% - 1rem); /* Subtract 1rem to match the left padding */
-            margin: 0 auto; /* Center the content */
+            width: 100%; /* Full width of the parent */
         }
         .offering-details p {
             margin-top: 0;
             font-size: 0.9rem;
+            padding-right: 1rem; /* Match right padding with left padding */
         }
         .stats-table {
-            width: 100%;
+            width: calc(100% - 1rem); /* Subtract 1rem to match the left padding */
             border-collapse: collapse;
             margin-top: 1rem;
             font-size: 0.9rem;
@@ -86,8 +86,11 @@
             .offering-plot {
                 margin-bottom: 1rem;
             }
-            .offering-details-inner {
-                max-width: 100%;
+            .offering-details p {
+                padding-right: 0;
+            }
+            .stats-table {
+                width: 100%;
             }
         }
     </style>
