@@ -130,6 +130,10 @@
             max-height: 500px;
             object-fit: contain;
         }
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
         .stats-table {
             width: 100%;
             border-collapse: collapse;
@@ -259,8 +263,17 @@
                 font-size: 2rem;
             }
             .offering-plot img {
-                max-height: 400px;
-                width: 100%;
+                max-height: none;
+                margin-bottom: 1rem;
+            }
+            .stats-table {
+                font-size: 0.8rem;
+            }
+            .stats-table th, .stats-table td {
+                padding: 0.3rem;
+            }
+            .offering-content {
+                padding: 1rem;
             }
         }
 
@@ -341,14 +354,16 @@
                     <div class="offering-plot">
                         <img src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
                     </div>
-                    <table class="stats-table" id="longShortStatsTable">
-                        <tr>
-                            <th>Metric</th>
-                            <th>Strategy</th>
-                            <th>Buy & Hold</th>
-                        </tr>
-                        <!-- Table rows will be populated dynamically -->
-                    </table>
+                    <div class="table-container">
+                        <table class="stats-table" id="longShortStatsTable">
+                            <tr>
+                                <th>Metric</th>
+                                <th>Strategy</th>
+                                <th>Buy & Hold</th>
+                            </tr>
+                            <!-- Table rows will be populated dynamically -->
+                        </table>
+                    </div>
                     <div class="offering-details">
                         <p>Our flagship Adaptive Long/Short Strategy embodies our philosophy of dynamic management and market adaptability. It's designed to thrive in both bull and bear markets, offering a truly all-weather investment solution. By analysing market sentiment, volatility, and credit conditions, this strategy adapts its stance to capitalise on opportunities in any market environment.</p>
                     </div>
@@ -360,14 +375,16 @@
                     <div class="offering-plot">
                         <img src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
                     </div>
-                    <table class="stats-table" id="longOnlyStatsTable">
-                        <tr>
-                            <th>Metric</th>
-                            <th>Strategy</th>
-                            <th>Buy & Hold</th>
-                        </tr>
-                        <!-- Table rows will be populated dynamically -->
-                    </table>
+                    <div class="table-container">
+                        <table class="stats-table" id="longOnlyStatsTable">
+                            <tr>
+                                <th>Metric</th>
+                                <th>Strategy</th>
+                                <th>Buy & Hold</th>
+                            </tr>
+                            <!-- Table rows will be populated dynamically -->
+                        </table>
+                    </div>
                     <div class="offering-details">
                         <p>The Dynamic Equity Long-Only Strategy is designed for investors seeking a more traditional approach enhanced by active management. This model dynamically shifts between equity exposure and cash positions, aiming to deliver steady growth while significantly reducing volatility and avoiding large drawdowns, offering a more stable investment experience across varying market conditions.</p>
                     </div>
@@ -393,7 +410,7 @@
             </form>
         </section>
     </div>
-    <footer>
+<footer>
         <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved.</p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
@@ -526,4 +543,5 @@
         });
     });
 </script>
-
+</body>
+</html>
