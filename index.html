@@ -120,23 +120,14 @@
             padding: 1.5rem;
         }
         .offering-plot {
-            --plot-max-width: 800px;
-            --plot-aspect-ratio: 56.25%; /* 16:9 aspect ratio by default */
-            
             width: 100%;
-            max-width: var(--plot-max-width);
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: var(--plot-aspect-ratio);
-            position: relative;
+            margin-bottom: 1.5rem;
         }
-        
         .offering-plot img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
+            height: auto;
+            border-radius: 4px;
+            max-height: 500px;
             object-fit: contain;
         }
         .table-container {
@@ -360,8 +351,8 @@
             <div class="offering-card">
                 <h3>Adaptive Long/Short Strategy</h3>
                 <div class="offering-content">
-                    <div class="offering-plot" style="--plot-max-width: 1000px; --plot-aspect-ratio: 75%;">
-                        <img src="your-image-source.jpg" alt="Equity Portfolio Performance">
+                    <div class="offering-plot">
+                        <img src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longShortStatsTable">
