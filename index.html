@@ -42,7 +42,6 @@
         .offering-plot {
             flex: 0 0 65%;
             max-width: 65%;
-            padding-right: 1rem; /* Add right padding to create space between plot and details */
         }
         .offering-plot img {
             width: 100%;
@@ -50,8 +49,12 @@
             border-radius: 4px;
         }
         .offering-details {
-            flex: 0 0 calc(35% - 2rem); /* Subtract 2rem to account for the padding on both sides */
-            padding: 0 1rem; /* Add equal padding on both sides */
+            flex: 0 0 35%;
+            padding-left: 1rem; /* Add left padding to create space between plot and details */
+        }
+        .offering-details-inner {
+            max-width: calc(100% - 1rem); /* Subtract 1rem to match the left padding */
+            margin: 0 auto; /* Center the content */
         }
         .offering-details p {
             margin-top: 0;
@@ -83,6 +86,9 @@
             .offering-plot {
                 margin-bottom: 1rem;
             }
+            .offering-details-inner {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -95,34 +101,36 @@
                 <img src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
             </div>
             <div class="offering-details">
-                <p>The flagship strategy is designed to provide superior risk-adjusted returns compared to traditional portfolios. It is a risk-on, equity-only portfolio that does not engage in short-selling and stays in cash when not invested in equities.</p>
-                <table class="stats-table">
-                    <tr>
-                        <th>Metric</th>
-                        <th>Model</th>
-                        <th>Buy & Hold</th>
-                    </tr>
-                    <tr>
-                        <td>Total Return</td>
-                        <td>1040%</td>
-                        <td>372%</td>
-                    </tr>
-                    <tr>
-                        <td>CAGR</td>
-                        <td>15.2%</td>
-                        <td>9.8%</td>
-                    </tr>
-                    <tr>
-                        <td>Sharpe Ratio</td>
-                        <td>1.45</td>
-                        <td>0.78</td>
-                    </tr>
-                    <tr>
-                        <td>Max Drawdown</td>
-                        <td>-25.3%</td>
-                        <td>-55.2%</td>
-                    </tr>
-                </table>
+                <div class="offering-details-inner">
+                    <p>The flagship strategy is designed to provide superior risk-adjusted returns compared to traditional portfolios. It is a risk-on, equity-only portfolio that does not engage in short-selling and stays in cash when not invested in equities.</p>
+                    <table class="stats-table">
+                        <tr>
+                            <th>Metric</th>
+                            <th>Model</th>
+                            <th>Buy & Hold</th>
+                        </tr>
+                        <tr>
+                            <td>Total Return</td>
+                            <td>1040%</td>
+                            <td>372%</td>
+                        </tr>
+                        <tr>
+                            <td>CAGR</td>
+                            <td>15.2%</td>
+                            <td>9.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Sharpe Ratio</td>
+                            <td>1.45</td>
+                            <td>0.78</td>
+                        </tr>
+                        <tr>
+                            <td>Max Drawdown</td>
+                            <td>-25.3%</td>
+                            <td>-55.2%</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
