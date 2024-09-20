@@ -205,34 +205,39 @@
             background-color: #2a2a4e;
         }
 
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
             header {
-                padding: 0.5rem 0.25rem;
-                flex-direction: column;
+                padding: 0.5rem 1rem;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
-                justify-content: center;
             }
             .logo {
                 width: 80px;
                 height: 24px;
-                margin: 0.5rem 0;
+                margin: 0;
             }
             nav {
-                display: block;
-                width: 100%;
+                display: flex;
             }
             nav ul {
                 flex-direction: row;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-end;
                 flex-wrap: wrap;
                 padding: 0;
             }
             nav ul li {
-                margin: 0.25rem 0.5rem;
+                margin: 0 0 0 1rem;
             }
             nav ul li a {
                 font-size: 0.8rem;
+            }
+            .section {
+                padding: 2rem 1rem;
+            }
+            #contact form {
+                padding: 0 1rem;
             }
             .hero h1 {
                 font-size: 2rem;
@@ -242,6 +247,9 @@
             }
             h2 {
                 font-size: 2rem;
+            }
+            #contact form {
+                padding: 0 1rem;
             }
             .offering-plot img {
                 max-height: 400px;
@@ -346,98 +354,127 @@
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if(typeof particlesJS !== 'undefined') {
-                particlesJS("particles-js", {
-                    "particles": {
-                        "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-                        "color": {"value": "#ffffff"},
-                        "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}, "polygon": {"nb_sides": 5}},
-                        "opacity": {"value": 0.5, "random": false, "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}},
-                        "size": {"value": 3, "random": true, "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}},
-                        "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
-                        "move": {"enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}}
-                    },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}, "resize": true},
-                        "modes": {"grab": {"distance": 400, "line_linked": {"opacity": 1}}, "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3}, "repulse": {"distance": 200, "duration": 0.4}, "push": {"particles_nb": 4}, "remove": {"particles_nb": 2}}
-                    },
-                    "retina_detect": true
-                });
-            } else {
-                console.error("Particles.js library failed to load");
-            }
-
-            // Header behavior
-            const header = document.querySelector('header');
-            const hero = document.getElementById('hero');
-
-            // Logo click handler
-            document.querySelector('.logo a').addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if(typeof particlesJS !== 'undefined') {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+                    "color": {"value": "#ffffff"},
+                    "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}, "polygon": {"nb_sides": 5}},
+                    "opacity": {"value": 0.5, "random": false, "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}},
+                    "size": {"value": 3, "random": true, "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}},
+                    "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
+                    "move": {"enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}}
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}, "resize": true},
+                    "modes": {"grab": {"distance": 400, "line_linked": {"opacity": 1}}, "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3}, "repulse": {"distance": 200, "duration": 0.4}, "push": {"particles_nb": 4}, "remove": {"particles_nb": 2}}
+                },
+                "retina_detect": true
             });
-        });
+        } else {
+            console.error("Particles.js library failed to load");
+        }
 
-        // Back to top button functionality
-        const backToTopButton = document.getElementById('back-to-top');
-        const footer = document.querySelector('footer');
+        // Header behavior
+        const header = document.querySelector('header');
+        const hero = document.getElementById('hero');
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'flex';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-
-            const footerRect = footer.getBoundingClientRect();
-            if (footerRect.top < window.innerHeight) {
-                backToTopButton.classList.add('hidden');
-            } else {
-                backToTopButton.classList.remove('hidden');
-            }
-        });
-
-        backToTopButton.addEventListener('click', (e) => {
+        // Logo click handler
+        document.querySelector('.logo a').addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    });
 
-        // Populate the stats tables
-        function populateTable(data, tableId) {
-            const table = document.getElementById(tableId);
-            data.forEach(row => {
-                if (row[0] !== 'Metric' && row[0] !== '') {  // Skip header row and empty rows
-                    const tr = table.insertRow();
-                    const metricCell = tr.insertCell();
-                    const strategyCell = tr.insertCell();
-                    const buyHoldCell = tr.insertCell();
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+    const footer = document.querySelector('footer');
 
-                    metricCell.textContent = row[0];
-                    strategyCell.textContent = row[1];
-                    buyHoldCell.textContent = row[2];
-                }
-            });
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.style.display = 'flex';
+        } else {
+            backToTopButton.style.display = 'none';
         }
 
-        // Populate Long-Short table
-        Papa.parse('dashboard/docs/equity_portfolio_(long-short)_stats.csv', {
-            download: true,
-            complete: function(results) {
-                populateTable(results.data, 'longShortStatsTable');
-            }
-        });
+        const footerRect = footer.getBoundingClientRect();
+        if (footerRect.top < window.innerHeight) {
+            backToTopButton.classList.add('hidden');
+        } else {
+            backToTopButton.classList.remove('hidden');
+        }
+    });
 
-        // Populate Long-Only table
-        Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
-            download: true,
-            complete: function(results) {
-                populateTable(results.data, 'longOnlyStatsTable');
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Populate the stats tables
+    function populateTable(data, tableId) {
+        const table = document.getElementById(tableId);
+        data.forEach(row => {
+            if (row[0] !== 'Metric' && row[0] !== '') {  // Skip header row and empty rows
+                const tr = table.insertRow();
+                const metricCell = tr.insertCell();
+                const strategyCell = tr.insertCell();
+                const buyHoldCell = tr.insertCell();
+
+                metricCell.textContent = row[0];
+                strategyCell.textContent = row[1];
+                buyHoldCell.textContent = row[2];
             }
         });
-    </script>
+    }
+
+    // Populate Long-Short table
+    Papa.parse('dashboard/docs/equity_portfolio_(long-short)_stats.csv', {
+        download: true,
+        complete: function(results) {
+            populateTable(results.data, 'longShortStatsTable');
+        }
+    });
+
+    // Populate Long-Only table
+    Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
+        download: true,
+        complete: function(results) {
+            populateTable(results.data, 'longOnlyStatsTable');
+        }
+    });
+
+    // Form submission handler
+    document.querySelector('#contact form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        fetch(this.action, {
+            method: 'POST',
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert('Message sent successfully!');
+                this.reset();
+                window.location.href = '#hero'; // Changed to redirect to hero section
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                })
+            }
+        }).catch(error => {
+            alert("Oops! There was a problem submitting your form");
+        });
+    });
+</script>
 </body>
 </html>
