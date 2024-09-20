@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MWM Research - Our Offerings</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         body, html {
             margin: 0;
@@ -50,18 +51,18 @@
         }
         .offering-details {
             flex: 0 0 35%;
-            padding-left: 1rem; /* Space between plot and details */
+            padding-left: 1rem;
         }
         .offering-details-inner {
-            width: 100%; /* Full width of the parent */
+            width: 100%;
         }
         .offering-details p {
             margin-top: 0;
             font-size: 0.9rem;
-            padding-right: 1rem; /* Match right padding with left padding */
+            padding-right: 1rem;
         }
         .stats-table {
-            width: calc(100% - 1rem); /* Subtract 1rem to match the left padding */
+            width: calc(100% - 1rem);
             border-collapse: collapse;
             margin-top: 1rem;
             font-size: 0.9rem;
@@ -106,36 +107,53 @@
             <div class="offering-details">
                 <div class="offering-details-inner">
                     <p>The flagship strategy is designed to provide superior risk-adjusted returns compared to traditional portfolios. It is a risk-on, equity-only portfolio that does not engage in short-selling and stays in cash when not invested in equities.</p>
-                    <table class="stats-table">
+                    <table class="stats-table" id="statsTable">
                         <tr>
                             <th>Metric</th>
-                            <th>Model</th>
+                            <th>Strategy</th>
                             <th>Buy & Hold</th>
                         </tr>
-                        <tr>
-                            <td>Total Return</td>
-                            <td>1040%</td>
-                            <td>372%</td>
-                        </tr>
-                        <tr>
-                            <td>CAGR</td>
-                            <td>15.2%</td>
-                            <td>9.8%</td>
-                        </tr>
-                        <tr>
-                            <td>Sharpe Ratio</td>
-                            <td>1.45</td>
-                            <td>0.78</td>
-                        </tr>
-                        <tr>
-                            <td>Max Drawdown</td>
-                            <td>-25.3%</td>
-                            <td>-55.2%</td>
-                        </tr>
+                        <!-- Table rows will be populated dynamically -->
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function formatValue(value, metric) {
+            const numValue = parseFloat(value);
+            if (metric === 'Cumulative Return' || metric === 'Max Drawdown') {
+                return (numValue * 100).toFixed(1) + '%';
+            } else if (metric === 'CAGR%' || metric === 'Volatility (ann.)') {
+                return numValue.toFixed(2) + '%';
+            } else {
+                return numValue.toFixed(2);
+            }
+        }
+
+        function populateTable(data) {
+            const table = document.getElementById('statsTable');
+            data.forEach(row => {
+                if (row[0] !== 'Metric') {  // Skip header row
+                    const tr = table.insertRow();
+                    const metricCell = tr.insertCell();
+                    const strategyCell = tr.insertCell();
+                    const buyHoldCell = tr.insertCell();
+
+                    metricCell.textContent = row[0];
+                    strategyCell.textContent = formatValue(row[1], row[0]);
+                    buyHoldCell.textContent = formatValue(row[2], row[0]);
+                }
+            });
+        }
+
+        Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
+            download: true,
+            complete: function(results) {
+                populateTable(results.data);
+            }
+        });
+    </script>
 </body>
 </html>
