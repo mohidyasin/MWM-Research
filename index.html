@@ -75,9 +75,10 @@
             margin: 0 auto;
         }
         h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 2rem;
             color: #1a1a2e;
+            text-align: center;
         }
         p {
             line-height: 1.6;
@@ -92,7 +93,7 @@
             max-width: 1400px;
             width: 95%;
         }
-        .offering-card h2 {
+        .offering-card h3 {
             background-color: #1a1a2e;
             color: #ffffff;
             margin: 0;
@@ -231,8 +232,31 @@
         </section>
         <section id="offerings" class="section">
             <h2>Our Offerings</h2>
+            <!-- Long-Short Equity Portfolio Card -->
             <div class="offering-card">
-                <h2>Equity Portfolio Performance (Long-Only)</h2>
+                <h3>Equity Portfolio Performance (Long-Short)</h3>
+                <div class="offering-content">
+                    <div class="offering-plot">
+                        <img src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
+                    </div>
+                    <div class="offering-details">
+                        <div class="offering-details-inner">
+                            <p>Our long-short equity strategy aims to capitalize on both rising and falling market conditions, providing enhanced risk-adjusted returns and reduced portfolio volatility.</p>
+                            <table class="stats-table" id="longShortStatsTable">
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Strategy</th>
+                                    <th>Buy & Hold</th>
+                                </tr>
+                                <!-- Table rows will be populated dynamically -->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Long-Only Equity Portfolio Card -->
+            <div class="offering-card">
+                <h3>Equity Portfolio Performance (Long-Only)</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
                         <img src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
@@ -240,7 +264,7 @@
                     <div class="offering-details">
                         <div class="offering-details-inner">
                             <p>The flagship strategy is designed to provide superior risk-adjusted returns compared to traditional portfolios. It is a risk-on, equity-only portfolio that does not engage in short-selling and stays in cash when not invested in equities.</p>
-                            <table class="stats-table" id="statsTable">
+                            <table class="stats-table" id="longOnlyStatsTable">
                                 <tr>
                                     <th>Metric</th>
                                     <th>Strategy</th>
@@ -254,7 +278,7 @@
             </div>
         </section>
         <section id="contact" class="section">
-            <h2>Interested?</h2>
+            <h2>Contact</h2>
             <form class="contact-form">
                 <input type="text" name="name" placeholder="Name*" required>
                 <input type="email" name="email" placeholder="Email*" required>
@@ -318,9 +342,9 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Populate the stats table
-        function populateTable(data) {
-            const table = document.getElementById('statsTable');
+        // Populate the stats tables
+        function populateTable(data, tableId) {
+            const table = document.getElementById(tableId);
             data.forEach(row => {
                 if (row[0] !== 'Metric' && row[0] !== '') {  // Skip header row and empty rows
                     const tr = table.insertRow();
@@ -335,12 +359,24 @@
             });
         }
 
+        // Populate Long-Short table
+        Papa.parse('dashboard/docs/equity_portfolio_(long-short)_stats.csv', {
+            download: true,
+            complete: function(results) {
+                populateTable(results.data, 'longShortStatsTable');
+            }
+        });
+
+        // Populate Long-Only table
         Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
             download: true,
             complete: function(results) {
-                populateTable(results.data);
+                populateTable(results.data, 'longOnlyStatsTable');
             }
         });
     </script>
 </body>
 </html>
+
+
+        
