@@ -1,36 +1,36 @@
 {
-    "last_run_date": "2024-09-20 02:52:48",
+    "last_run_date": "2024-09-20 02:58:18",
     "data_end_date": "2024-09-18",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": 10.400158613008106,
-            "CAGR%": 0.11121959315655006,
-            "Sharpe": 0.7949234647330048,
-            "Max Drawdown": -0.27331079362656896,
-            "Volatility (ann.)": 0.1465279949365253
+            "Cumulative Return": "1040%",
+            "CAGR%": "11.12%",
+            "Sharpe": "0.79",
+            "Max Drawdown": "-27.3%",
+            "Volatility (ann.)": "14.65%"
         },
         "Buy & Hold": {
-            "Cumulative Return": 3.7168546483635403,
-            "CAGR%": 0.06952730024749965,
-            "Sharpe": 0.4470506588017875,
-            "Max Drawdown": -0.5647366917817164,
-            "Volatility (ann.)": 0.19202570432670651
+            "Cumulative Return": "372%",
+            "CAGR%": "6.95%",
+            "Sharpe": "0.45",
+            "Max Drawdown": "-56.5%",
+            "Volatility (ann.)": "19.20%"
         }
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": 25.98816882649579,
-            "CAGR%": 0.15350128102887917,
-            "Sharpe": 0.8407388913587516,
-            "Max Drawdown": -0.36060989138542876,
-            "Volatility (ann.)": 0.19226052639914584
+            "Cumulative Return": "2599%",
+            "CAGR%": "15.35%",
+            "Sharpe": "0.84",
+            "Max Drawdown": "-36.1%",
+            "Volatility (ann.)": "19.23%"
         },
         "Buy & Hold": {
-            "Cumulative Return": 3.7168546483635403,
-            "CAGR%": 0.06952730024749965,
-            "Sharpe": 0.4470506588017875,
-            "Max Drawdown": -0.5647366917817164,
-            "Volatility (ann.)": 0.19202570432670651
+            "Cumulative Return": "372%",
+            "CAGR%": "6.95%",
+            "Sharpe": "0.45",
+            "Max Drawdown": "-56.5%",
+            "Volatility (ann.)": "19.20%"
         }
     }
 }
