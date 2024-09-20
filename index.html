@@ -231,13 +231,26 @@
                 position: relative;
                 overflow: hidden;
             }
-
+        
             .offering-plot img {
                 width: 100%;
-                height: auto;
-                display: block;
-                max-height: none;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
             }
+        }
+        
+        .offering-content {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            gap: 1rem; /* This creates a small space between elements */
+        }
+        
+        .table-container {
+            margin-top: 1rem; /* Reduced space between plot and table */
         }
 
         @media (max-width: 768px) {
