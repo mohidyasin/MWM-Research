@@ -74,13 +74,13 @@
             padding-top: 60px;
         }
         .section {
-            padding: 2rem 2rem; /* Reduced padding */
+            padding: 2rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
         h2 {
             font-size: 3rem;
-            margin-bottom: 1rem; /* Reduced margin */
+            margin-bottom: 1rem;
             color: #1a1a2e;
             text-align: center;
         }
@@ -213,9 +213,8 @@
                 align-items: center;
             }
             .logo {
-                width: 80px;
-                height: 24px;
-                margin: 0;
+                width: 120px;
+                height: 36px;
             }
             nav {
                 display: flex;
@@ -234,7 +233,7 @@
                 font-size: 0.8rem;
             }
             .section {
-                padding: 1rem 1rem; /* Further reduced padding for mobile */
+                padding: 1rem 1rem;
             }
             #contact form {
                 padding: 0 1rem;
@@ -251,7 +250,6 @@
             }
         }
 
-        /* Updated styles for the philosophy section */
         .philosophy-content {
             max-width: 800px;
             margin: 0 auto;
@@ -277,11 +275,15 @@
         <a href="#hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
                 <style>
-                    .main-text { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: white; }
-                    .sub-text { font-family: Arial, sans-serif; font-size: 16px; fill: #4ecdc4; letter-spacing: 5px; }
+                    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+                    .mwm { font-size: 32px; fill: #00A3E0; }
+                    .research { font-size: 16px; fill: #333333; }
+                    .circle { fill: none; stroke: #00A3E0; stroke-width: 3; }
                 </style>
-                <text x="100" y="28" class="main-text" text-anchor="middle">M<tspan dx="-10">W</tspan><tspan dx="-10">M</tspan></text>
-                <text x="100" y="50" class="sub-text" text-anchor="middle">RESEARCH</text>
+                <circle class="circle" cx="170" cy="30" r="20" />
+                <path class="circle" d="M170 20 L170 40" />
+                <text x="10" y="40" class="logo-text mwm">MWM</text>
+                <text x="10" y="55" class="logo-text research">RESEARCH</text>
             </svg>
         </a>
     </div>
@@ -493,7 +495,7 @@
             if (response.ok) {
                 alert('Message sent successfully!');
                 this.reset();
-                window.location.href = '#hero'; // Changed to redirect to hero section
+                window.location.href = '#hero';
             } else {
                 response.json().then(data => {
                     if (Object.hasOwn(data, 'errors')) {
@@ -508,12 +510,3 @@
         });
     });
 </script>
-</body>
-</html>
-
-
-
-
-
-
-                             
