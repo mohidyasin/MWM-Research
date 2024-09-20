@@ -5,78 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MWM Research</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #1a1a2e;
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-        .logo {
-            width: 200px;
-            height: 60px;
-        }
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            background-color: #1a1a2e;
-        }
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            color: #ffffff;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            text-align: center;
-            z-index: 1;
-        }
-        .content {
-            background-color: #ffffff;
-            color: #333;
-            position: relative;
-            z-index: 2;
-            padding: 4rem 2rem;
-        }
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #1a1a2e;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+    .logo {
+        width: 200px;
+        height: 60px;
+    }
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #1a1a2e;
+    }
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #ffffff;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        text-align: center;
+        z-index: 1;
+    }
+    .content {
+        background-color: #ffffff;
+        color: #333;
+        position: relative;
+        z-index: 2;
+        padding: 4rem 2rem;
+    }
+    .plots {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .plot {
+        width: 100%;
+    }
+    .plot img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+        background-color: #1a1a2e;
+        color: #8b8b9c;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        font-family: 'Roboto Mono', monospace;
+    }
+    @media (min-width: 768px) {
         .plots {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            max-width: 80%;
         }
-        .plot img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media (min-width: 1200px) {
+        .plots {
+            max-width: 1000px;
         }
-        footer {
-            background-color: #1a1a2e;
-            color: #8b8b9c;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-            font-family: 'Roboto Mono', monospace;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
