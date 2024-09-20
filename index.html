@@ -108,11 +108,11 @@
         .offering-content {
             display: flex;
             flex-direction: column;
-            padding: 1rem;
+            padding: 1.5rem;
         }
         .offering-plot {
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .offering-plot img {
             width: 100%;
@@ -121,15 +121,11 @@
             max-height: 500px;
             object-fit: contain;
         }
-        .offering-details p {
-            margin-top: 0;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
         .stats-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.9rem;
+            margin-bottom: 1.5rem;
         }
         .stats-table th, .stats-table td {
             border: 1px solid #ddd;
@@ -138,6 +134,14 @@
         }
         .stats-table th {
             background-color: #f2f2f2;
+        }
+        .offering-details {
+            margin-bottom: 0.5rem;
+        }
+        .offering-details p {
+            margin-top: 0;
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
         footer {
             background-color: #1a1a2e;
@@ -213,8 +217,9 @@
                 align-items: center;
             }
             .logo {
-                width: 120px;
-                height: 36px;
+                width: 80px;
+                height: 24px;
+                margin: 0;
             }
             nav {
                 display: flex;
@@ -275,15 +280,11 @@
         <a href="#hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
                 <style>
-                    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
-                    .mwm { font-size: 32px; fill: #00A3E0; }
-                    .research { font-size: 16px; fill: #333333; }
-                    .circle { fill: none; stroke: #00A3E0; stroke-width: 3; }
+                    .main-text { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: white; }
+                    .sub-text { font-family: Arial, sans-serif; font-size: 16px; fill: #4ecdc4; letter-spacing: 5px; }
                 </style>
-                <circle class="circle" cx="170" cy="30" r="20" />
-                <path class="circle" d="M170 20 L170 40" />
-                <text x="10" y="40" class="logo-text mwm">MWM</text>
-                <text x="10" y="55" class="logo-text research">RESEARCH</text>
+                <text x="100" y="28" class="main-text" text-anchor="middle">M<tspan dx="-10">W</tspan><tspan dx="-10">M</tspan></text>
+                <text x="100" y="50" class="sub-text" text-anchor="middle">RESEARCH</text>
             </svg>
         </a>
     </div>
