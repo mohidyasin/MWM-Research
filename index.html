@@ -121,15 +121,20 @@
         }
         .offering-plot {
             width: 100%;
-            margin-bottom: 1.5rem;
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            padding-bottom: 56.25%; /* This assumes a 16:9 aspect ratio. Adjust if different */
+            height: 0;
+            overflow: hidden;
         }
         .offering-plot img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            border-radius: 4px;
+            height: 100%;
             object-fit: contain;
         }
         .table-container {
@@ -405,10 +410,11 @@
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit">Send</button>
-            </form>
+
+</form>
         </section>
     </div>
-<footer>
+    <footer>
         <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved.</p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
