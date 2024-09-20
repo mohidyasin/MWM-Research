@@ -342,6 +342,10 @@
             }
         }
 
+        // Initial call to set correct state
+        header.classList.add('show-nav');
+        updateHeaderVisibility();
+
         window.addEventListener('scroll', updateHeaderVisibility);
 
         // Logo click handler
