@@ -29,19 +29,6 @@
             width: 200px;
             height: 60px;
         }
-        nav ul {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin-left: 1.5rem;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
         #particles-js {
             position: absolute;
             width: 100%;
@@ -66,77 +53,20 @@
             color: #333;
             position: relative;
             z-index: 2;
-            padding-top: 60px;
-        }
-        .section {
             padding: 4rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
         }
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #1a1a2e;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        .offerings {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .offering {
-            background-color: #f0f0f0;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        .offering h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1a1a2e;
-        }
-        .dashboard-container {
+        .plots {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             gap: 2rem;
             margin-top: 2rem;
         }
-        .dashboard {
-            flex: 1 1 45%;
-            min-width: 300px;
-            height: 500px;
-            background-color: #f0f0f0;
+        .plot img {
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
-            overflow: hidden;
-        }
-        .dashboard iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            background-color: #1a1a2e;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #2a2a4e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         footer {
             background-color: #1a1a2e;
@@ -145,35 +75,6 @@
             padding: 1rem;
             font-size: 0.9rem;
             font-family: 'Roboto Mono', monospace;
-        }
-        footer p {
-            margin: 0;
-        }
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #1a1a2e;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            z-index: 1000;
-            transition: opacity 0.3s;
-        }
-        #back-to-top:hover {
-            background-color: #2a2a4e;
-        }
-        #back-to-top.hidden {
-            opacity: 0;
-            pointer-events: none;
         }
     </style>
 </head>
@@ -189,67 +90,24 @@
               <text x="13" y="58" class="sub-text">RESEARCH</text>
             </svg>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#offerings">Offerings</a></li>
-                <li><a href="#dashboards">Dashboards</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
     <div id="hero" class="hero">
         <div id="particles-js"></div>
         <h1>Actively Managed Portfolio Solutions</h1>
     </div>
     <div class="content">
-        <section id="philosophy" class="section">
-            <h2>Our Philosophy</h2>
-            <p>AHF Research offers investment strategy solutions tailored for various environments and goals. Our aim is to outperform traditional approaches while minimizing both drawdown and risk exposure. Each investment system is actively managed and adjusted to an ever changing market environment and regimes. This contrasts with the conventional approach of buy, hold, and rebalance. We firmly believe individuals can obtain superior results by dynamically managing their investments instead of relying on traditional money managers or automated investment services.</p>
-        </section>
-        <section id="offerings" class="section">
-            <h2>Our Offerings</h2>
-            <div class="offerings">
-                <div class="offering">
-                    <h3>Equities</h3>
-                    <p>The flagship strategy is designed to provide superior risk-adjusted returns compared to traditional portfolios. It is a risk-on, equity-only portfolio that does not engage in short-selling and stays in cash when not invested in equities.</p>
-                </div>
-                <div class="offering">
-                    <h3>Crypto</h3>
-                    <p>Exposure to this alternative asset class with lower volatility and, consequently, minimized investment drawdowns. The approach stays limited to Level 1 crypto assets with strong fundamental and platform prospects.</p>
-                </div>
-                <div class="offering">
-                    <h3>Defensive</h3>
-                    <p>The Defensive strategy is most effective when paired with the Equities exposure. It aims to hedge against currency, inflation, and recession risks during risk-off periods.</p>
-                </div>
+        <div class="plots">
+            <div class="plot">
+                <img src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
             </div>
-        </section>
-        <section id="dashboards" class="section">
-            <h2>Our Dashboards</h2>
-            <div class="dashboard-container">
-                <div class="dashboard">
-                    <iframe src="https://placeholder-for-streamlit-dashboard-1.com" allowfullscreen></iframe>
-                </div>
-                <div class="dashboard">
-                    <iframe src="https://placeholder-for-streamlit-dashboard-2.com" allowfullscreen></iframe>
-                </div>
+            <div class="plot">
+                <img src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
             </div>
-        </section>
-        <section id="contact" class="section">
-            <h2>Interested?</h2>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Name*" required>
-                <input type="email" name="email" placeholder="Email*" required>
-                <textarea name="message" placeholder="Your message" rows="4"></textarea>
-                <button type="submit">Let's Talk</button>
-            </form>
-        </section>
+        </div>
     </div>
     <footer>
         <p>Copyright © 2024 MWM-RESEARCH.COM. All rights reserved.</p>
     </footer>
-    <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
@@ -275,30 +133,6 @@
             } else {
                 console.error("Particles.js library failed to load");
             }
-        });
-
-        // Back to top button functionality
-        const backToTopButton = document.getElementById('back-to-top');
-        const footer = document.querySelector('footer');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'flex';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-
-            const footerRect = footer.getBoundingClientRect();
-            if (footerRect.top < window.innerHeight) {
-                backToTopButton.classList.add('hidden');
-            } else {
-                backToTopButton.classList.remove('hidden');
-            }
-        });
-
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
