@@ -561,12 +561,16 @@
             
             if (longOnlyImg) {
                 longOnlyImg.src = `dashboard/docs/${metadata.plot_dimensions.long_only.filename}?t=${timestamp}`;
+                console.log('Long-only image source updated:', longOnlyImg.src);
             }
             if (longShortImg) {
                 longShortImg.src = `dashboard/docs/${metadata.plot_dimensions.long_short.filename}?t=${timestamp}`;
+                console.log('Long-short image source updated:', longShortImg.src);
             }
         })
-        .catch(error => console.error('Error loading metadata:', error));
+        .catch(error => {
+            console.error('Error loading or parsing metadata:', error);
+        });
 </script>
 </body>
 </html>
