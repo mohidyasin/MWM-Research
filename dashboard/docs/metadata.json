@@ -1,5 +1,5 @@
 {
-    "last_run_date": "2024-09-21 01:25:27",
+    "last_run_date": "2024-09-21 01:41:33",
     "data_end_date": "2024-09-19",
     "long_only_stats": {
         "Strategy": {
@@ -35,12 +35,12 @@
     },
     "plot_dimensions": {
         "long_only": {
-            "width": 4783,
-            "height": 2335
+            "width": 4736,
+            "height": 2374
         },
         "long_short": {
-            "width": 4783,
-            "height": 2335
+            "width": 4736,
+            "height": 2374
         }
     }
 }
