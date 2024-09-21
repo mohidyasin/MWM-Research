@@ -1,5 +1,5 @@
 {
-    "last_run_date": "2024-09-21 01:47:57",
+    "last_run_date": "2024-09-21 01:59:37",
     "data_end_date": "2024-09-19",
     "long_only_stats": {
         "Strategy": {
@@ -35,12 +35,15 @@
     },
     "plot_dimensions": {
         "long_only": {
+            "filename": "equity_portfolio_performance_(long-only).png",
             "width": 4736,
             "height": 2374
         },
         "long_short": {
+            "filename": "equity_portfolio_performance_(long-short).png",
             "width": 4736,
             "height": 2374
         }
-    }
+    },
+    "timestamp": 1726883977
 }
