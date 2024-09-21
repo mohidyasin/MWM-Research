@@ -16,7 +16,7 @@ At MWM Research, we believe in three core principles:
 
 Our key offerings include:
 
-- **Adaptive Long/Short Strategy**: A flexible investment solution designed to perform in both bullish and bearish markets, leveraging market sentiment and volatility to optimize returns.
+- **Adaptive Long/Short Strategy**: A flexible investment solution designed to perform in both bullish and bearish markets, leveraging market sentiment and volatility to optimise returns.
 
 - **Dynamic Equity Long-Only Strategy**: A traditional yet actively managed approach that dynamically shifts between equity exposure and cash, aiming for steady growth with reduced volatility.
 
