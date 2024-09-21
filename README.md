@@ -10,7 +10,7 @@ At MWM Research, we believe in three core principles:
 
 - **Risk Mitigation**: Our approach prioritises minimizing drawdowns and overall risk exposure, ensuring that capital preservation is as crucial as growth.
 
-- **Customized Solutions**: We tailor our strategies to meet each client's unique needs, offering flexibility in leverage, risk management, and portfolio composition.
+- **Customised Solutions**: We tailor our strategies to meet each client's unique needs, offering flexibility in leverage, risk management, and portfolio composition.
 
 ## Offerings
 
