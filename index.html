@@ -359,7 +359,7 @@
                 <h3>Adaptive Long/Short Strategy</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
-                        <img src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
+                        <img id="long-short-img" src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longShortStatsTable">
@@ -380,7 +380,7 @@
                 <h3>Dynamic Equity Long-Only Strategy</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
-                        <img src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
+                        <img id="long-only-img" src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longOnlyStatsTable">
@@ -549,6 +549,26 @@
             alert("Oops! There was a problem submitting your form");
         });
     });
+</script>
+
+<script>
+    fetch('dashboard/docs/metadata.json')
+        .then(response => response.json())
+        .then(metadata => {
+            const timestamp = metadata.timestamp;
+            const longOnlyImg = document.getElementById('long-only-img');
+            const longShortImg = document.getElementById('long-short-img');
+            
+            if (longOnlyImg) {
+                longOnlyImg.src = `dashboard/docs/${metadata.plot_dimensions.long_only.filename}?t=${timestamp}`;
+            }
+            if (longShortImg) {
+                longShortImg.src = `dashboard/docs/${metadata.plot_dimensions.long_short.filename}?t=${timestamp}`;
+            }
+            
+            // You can also update other elements with metadata here if needed
+        })
+        .catch(error => console.error('Error loading metadata:', error));
 </script>
 </body>
 </html>
