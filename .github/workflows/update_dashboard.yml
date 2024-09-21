@@ -2,7 +2,7 @@ name: Update Dashboard
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs every hour (adjust as needed)
+    - cron: '0 18 * * *' # Runs every day at 6 PM UTC
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
