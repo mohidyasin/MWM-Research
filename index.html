@@ -359,7 +359,7 @@
                 <h3>Adaptive Long/Short Strategy</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
-                        <img id="long-short-img" src="dashboard/docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
+                        <img id="long-short-img" src="docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longShortStatsTable">
@@ -380,7 +380,7 @@
                 <h3>Dynamic Equity Long-Only Strategy</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
-                        <img id="long-only-img" src="dashboard/docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
+                        <img id="long-only-img" src="docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longOnlyStatsTable">
@@ -506,7 +506,7 @@
     }
 
     // Populate Long-Short table
-    Papa.parse('dashboard/docs/equity_portfolio_(long-short)_stats.csv', {
+    Papa.parse('docs/equity_portfolio_(long-short)_stats.csv', {
         download: true,
         complete: function(results) {
             populateTable(results.data, 'longShortStatsTable');
@@ -514,7 +514,7 @@
     });
 
     // Populate Long-Only table
-    Papa.parse('dashboard/docs/equity_portfolio_(long-only)_stats.csv', {
+    Papa.parse('docs/equity_portfolio_(long-only)_stats.csv', {
         download: true,
         complete: function(results) {
             populateTable(results.data, 'longOnlyStatsTable');
@@ -552,7 +552,7 @@
 </script>
 
 <script>
-    fetch('dashboard/docs/metadata.json')
+    fetch('docs/metadata.json')
         .then(response => response.json())
         .then(metadata => {
             const timestamp = metadata.timestamp;
@@ -560,11 +560,11 @@
             const longShortImg = document.getElementById('long-short-img');
             
             if (longOnlyImg) {
-                longOnlyImg.src = `dashboard/docs/${metadata.plot_dimensions.long_only.filename}?t=${timestamp}`;
+                longOnlyImg.src = `docs/${metadata.plot_dimensions.long_only.filename}?t=${timestamp}`;
                 console.log('Long-only image source updated:', longOnlyImg.src);
             }
             if (longShortImg) {
-                longShortImg.src = `dashboard/docs/${metadata.plot_dimensions.long_short.filename}?t=${timestamp}`;
+                longShortImg.src = `docs/${metadata.plot_dimensions.long_short.filename}?t=${timestamp}`;
                 console.log('Long-short image source updated:', longShortImg.src);
             }
         })
