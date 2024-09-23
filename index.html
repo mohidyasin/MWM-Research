@@ -246,11 +246,12 @@
             color: #1a1a2e;
             margin-bottom: 5px;
         }
-        .linkedin-logo {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-            margin-left: 10px;
+        .linkedin-link {
+            color: #8b8b9c;
+            text-decoration: none;
+        }
+        .linkedin-link:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -294,8 +295,12 @@
                 font-size: 2rem;
             }
             .offering-plot img {
-                max-height: none;
-                margin-bottom: 1rem;
+                width: 100%;
+                height: auto;
+                margin-bottom: 0.5rem;
+            }
+            .table-container {
+                margin-bottom: 0.5rem;
             }
             .stats-table {
                 font-size: 0.8rem;
@@ -306,19 +311,13 @@
             .offering-content {
                 padding: 1rem;
             }
-            /* New styles for mobile */
+            .offering-details p {
+                margin-top: 0.5rem;
+            }
             button[type="submit"] {
                 display: block;
                 margin: 0 auto;
                 width: 60%;
-            }
-            .table-container {
-                height: 210px; /* 30% reduction from 300px */
-                overflow-y: auto;
-            }
-            .offering-plot img {
-                height: calc(100vh - 210px - 100px); /* Adjust as needed */
-                object-fit: cover;
             }
         }
     </style>
@@ -413,11 +412,11 @@
                         </table>
                     </div>
                     <div class="offering-details">
-                        <p>The Dynamic Equity Long-Only Strategy is designed for investors seeking a more traditional approach enhanced by active management. This model dynamically shifts between equity exposure and cash positions, aiming to deliver steady growth while significantly reducing volatility and avoiding large drawdowns, offering a more stable investment experience across varying market conditions.
-                                                </div>
+                        <p>The Dynamic Equity Long-Only Strategy is designed for investors seeking a more traditional approach enhanced by active management. This model dynamically shifts between equity exposure and cash positions, aiming to deliver steady growth while significantly reducing volatility and avoiding large drawdowns, offering a more stable investment experience across varying market conditions.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+</section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <form action="https://formspree.io/f/mwpedldd" method="POST">
@@ -437,12 +436,9 @@
             </form>
         </section>
     </div>
-<footer>
-        <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved. 
-           <a href="https://www.linkedin.com/company/mwm-research/" target="_blank" rel="noopener noreferrer">
-               <img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo">
-           </a>
-        </p>
+    <footer>
+        <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved.</p>
+        <p><a href="https://www.linkedin.com/company/mwm-research/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn</a></p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
@@ -598,4 +594,3 @@
 </script>
 </body>
 </html>
-
