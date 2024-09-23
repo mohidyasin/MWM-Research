@@ -250,23 +250,6 @@
             color: #1a1a2e;
             margin-bottom: 5px;
         }
-        .linkedin-link {
-            color: #0077b5;
-            text-decoration: none;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-        .linkedin-link:hover {
-            color: #00a0dc;
-        }
-        .linkedin-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
         .modal {
             display: none;
             position: fixed;
@@ -346,24 +329,26 @@
             .offering-plot img {
                 width: 100%;
                 height: auto;
-                margin-bottom: 0.375rem;
+                margin-bottom: 0.1875rem;
             }
             .table-container {
                 height: 120px;
-                overflow-y: auto;
-                margin-bottom: 0.375rem;
+                overflow-y: hidden;
+                margin-bottom: 0.1875rem;
             }
             .stats-table {
-                font-size: 0.8rem;
+                font-size: 0.65rem;
+                line-height: 1;
             }
             .stats-table th, .stats-table td {
-                padding: 0.3rem;
+                padding: 0.15rem;
             }
             .offering-content {
-                padding: 0.75rem;
+                padding: 0.5rem;
             }
             .offering-details p {
-                margin-top: 0.375rem;
+                margin-top: 0.1875rem;
+                font-size: 0.8rem;
             }
             button[type="submit"] {
                 width: 60%;
@@ -436,8 +421,7 @@
                                 <th>Strategy</th>
                                 <th>Buy & Hold</th>
                             </tr>
-
-        <!-- Table rows will be populated dynamically -->
+                            <!-- Table rows will be populated dynamically -->
                         </table>
                     </div>
                     <div class="offering-details">
@@ -488,12 +472,6 @@
     </div>
     <footer>
         <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved.</p>
-        <p>
-            <a href="https://www.linkedin.com/company/mwm-research/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
-                <img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo">
-                LinkedIn
-            </a>
-        </p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
@@ -674,3 +652,4 @@
 </script>
 </body>
 </html>
+                    
