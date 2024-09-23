@@ -33,15 +33,15 @@
             right: 0;
             background-color: #1a1a2e;
             color: white;
-            padding: 0.5rem 2rem;
+            padding: 0.5rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
         }
         .logo {
-            width: 200px;
-            height: 60px;
+            width: 150px;
+            height: 45px;
         }
         .logo svg {
             width: 100%;
@@ -54,11 +54,12 @@
             padding: 0;
         }
         nav ul li {
-            margin-left: 1.5rem;
+            margin-left: 1rem;
         }
         nav ul li a {
             color: #ffffff;
             text-decoration: none;
+            font-size: 0.9rem;
         }
         #particles-js {
             position: absolute;
@@ -75,9 +76,10 @@
             color: #ffffff;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-align: center;
             z-index: 1;
+            padding: 0 1rem;
         }
         .content {
             background-color: #ffffff;
@@ -87,12 +89,12 @@
             padding-top: 60px;
         }
         .section {
-            padding: 2rem 2rem;
-            max-width: 1400px;
+            padding: 2rem 1rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
         h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: #1a1a2e;
             text-align: center;
@@ -107,45 +109,46 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 2rem auto;
             overflow: hidden;
-            max-width: 1400px;
-            width: 95%;
+            max-width: 100%;
+            width: 100%;
         }
         .offering-card h3 {
             background-color: #1a1a2e;
             color: #ffffff;
             margin: 0;
             padding: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             text-align: center;
         }
         .offering-content {
             display: flex;
             flex-direction: column;
-            padding: 1.5rem;
+            padding: 1rem;
         }
         .offering-plot {
             width: 100%;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         .offering-plot img {
             width: 100%;
             height: auto;
             border-radius: 4px;
-            max-height: 500px;
+            max-height: 400px;
             object-fit: contain;
             cursor: pointer;
         }
         .table-container {
             width: 100%;
+            overflow-x: auto;
         }
         .stats-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             line-height: 1.2;
         }
         .stats-table th, .stats-table td {
-            padding: 0.2rem 0.5rem;
+            padding: 0.5rem;
             text-align: left;
             border: none;
         }
@@ -227,7 +230,8 @@
             cursor: pointer;
             display: block;
             margin: 0 auto;
-            width: 40%;
+            width: 100%;
+            max-width: 200px;
         }
         button[type="submit"]:hover {
             background-color: #2a2a4e;
@@ -239,16 +243,17 @@
         }
         .principles {
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 1rem;
             border-radius: 5px;
-            margin-top: 20px;
+            margin-top: 1rem;
         }
         .principle {
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
         .principle h3 {
             color: #1a1a2e;
-            margin-bottom: 5px;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         .modal {
             display: none;
@@ -287,84 +292,23 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 0.25rem 0.5rem;
-            }
-            .logo {
-                width: 60px;
-                height: 18px;
-            }
-            nav ul li {
-                margin: 0 0 0 0.5rem;
-            }
-            nav ul li a {
-                font-size: 0.7rem;
-            }
             .section {
-                padding: 0.25rem 0.5rem;
-            }
-            .content > section {
-                margin-left: -0.5rem;
-                margin-right: -0.5rem;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-            }
-            #contact form {
-                padding: 0;
+                padding: 1rem;
             }
             .hero h1 {
-                font-size: 1.5rem;
-                padding: 0 0.5rem;
+                font-size: 1.75rem;
             }
             h2 {
                 font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
-            .offering-card {
-                margin: 0.5rem 0;
-                padding: 0.25rem;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .offering-content {
-                padding: 0.1rem;
-            }
-            .offering-plot img {
-                margin-bottom: 0.25rem;
-            }
-            .table-container {
-                max-height: 100px;
-                margin-bottom: 0.25rem;
-            }
-            .stats-table {
-                font-size: 0.6rem;
-                line-height: 1.1;
-            }
-            .stats-table th, .stats-table td {
-                padding: 0.1rem;
-            }
-            .offering-details p {
-                margin-top: 0.25rem;
-                font-size: 0.75rem;
-            }
-            button[type="submit"] {
-                width: 50%;
-                padding: 0.5rem 1rem;
             }
             .offering-card h3 {
-                padding: 0.5rem;
                 font-size: 1rem;
             }
-            .principle {
-                margin-bottom: 0.5rem;
+            .stats-table {
+                font-size: 0.7rem;
             }
             .principle h3 {
-                font-size: 0.9rem;
-                margin-bottom: 0.1rem;
-            }
-            .principle p {
-                font-size: 0.8rem;
-                margin-bottom: 0.25rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -463,6 +407,7 @@
                     </div>
                 </div>
             </div>
+        </section>
         </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
@@ -665,4 +610,3 @@
 </script>
 </body>
 </html>
-                    
