@@ -229,6 +229,30 @@
             background-color: #2a2a4e;
         }
 
+        .philosophy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .principles {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .principle {
+            margin-bottom: 15px;
+        }
+        .principle h3 {
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        .linkedin-logo {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 0.5rem 1rem;
@@ -282,24 +306,20 @@
             .offering-content {
                 padding: 1rem;
             }
-        }
-
-        .philosophy-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .principles {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .principle {
-            margin-bottom: 15px;
-        }
-        .principle h3 {
-            color: #1a1a2e;
-            margin-bottom: 5px;
+            /* New styles for mobile */
+            button[type="submit"] {
+                display: block;
+                margin: 0 auto;
+                width: 60%;
+            }
+            .table-container {
+                height: 210px; /* 30% reduction from 300px */
+                overflow-y: auto;
+            }
+            .offering-plot img {
+                height: calc(100vh - 210px - 100px); /* Adjust as needed */
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -393,8 +413,8 @@
                         </table>
                     </div>
                     <div class="offering-details">
-                        <p>The Dynamic Equity Long-Only Strategy is designed for investors seeking a more traditional approach enhanced by active management. This model dynamically shifts between equity exposure and cash positions, aiming to deliver steady growth while significantly reducing volatility and avoiding large drawdowns, offering a more stable investment experience across varying market conditions.</p>
-                    </div>
+                        <p>The Dynamic Equity Long-Only Strategy is designed for investors seeking a more traditional approach enhanced by active management. This model dynamically shifts between equity exposure and cash positions, aiming to deliver steady growth while significantly reducing volatility and avoiding large drawdowns, offering a more stable investment experience across varying market conditions.
+                                                </div>
                 </div>
             </div>
         </section>
@@ -418,7 +438,11 @@
         </section>
     </div>
 <footer>
-        <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved.</p>
+        <p>Copyright © 2024 MWM-RESEARCH.NET. All rights reserved. 
+           <a href="https://www.linkedin.com/company/mwm-research/" target="_blank" rel="noopener noreferrer">
+               <img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo">
+           </a>
+        </p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
 
@@ -574,3 +598,4 @@
 </script>
 </body>
 </html>
+
