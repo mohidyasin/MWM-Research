@@ -33,15 +33,15 @@
             right: 0;
             background-color: #1a1a2e;
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
         }
         .logo {
-            width: 150px;
-            height: 45px;
+            width: 200px;
+            height: 60px;
         }
         .logo svg {
             width: 100%;
@@ -54,12 +54,11 @@
             padding: 0;
         }
         nav ul li {
-            margin-left: 1rem;
+            margin-left: 1.5rem;
         }
         nav ul li a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 0.9rem;
         }
         #particles-js {
             position: absolute;
@@ -76,10 +75,9 @@
             color: #ffffff;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-align: center;
             z-index: 1;
-            padding: 0 1rem;
         }
         .content {
             background-color: #ffffff;
@@ -89,12 +87,12 @@
             padding-top: 60px;
         }
         .section {
-            padding: 2rem 1rem;
-            max-width: 1200px;
+            padding: 2rem 2rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
         h2 {
-            font-size: 2rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
             color: #1a1a2e;
             text-align: center;
@@ -109,46 +107,45 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 2rem auto;
             overflow: hidden;
-            max-width: 100%;
-            width: 100%;
+            max-width: 1400px;
+            width: 95%;
         }
         .offering-card h3 {
             background-color: #1a1a2e;
             color: #ffffff;
             margin: 0;
             padding: 1rem;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             text-align: center;
         }
         .offering-content {
             display: flex;
             flex-direction: column;
-            padding: 1rem;
+            padding: 1.5rem;
         }
         .offering-plot {
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .offering-plot img {
             width: 100%;
             height: auto;
             border-radius: 4px;
-            max-height: 400px;
+            max-height: 500px;
             object-fit: contain;
             cursor: pointer;
         }
         .table-container {
             width: 100%;
-            overflow-x: auto;
         }
         .stats-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             line-height: 1.2;
         }
         .stats-table th, .stats-table td {
-            padding: 0.5rem;
+            padding: 0.2rem 0.5rem;
             text-align: left;
             border: none;
         }
@@ -230,8 +227,7 @@
             cursor: pointer;
             display: block;
             margin: 0 auto;
-            width: 100%;
-            max-width: 200px;
+            width: 40%;
         }
         button[type="submit"]:hover {
             background-color: #2a2a4e;
@@ -243,17 +239,16 @@
         }
         .principles {
             background-color: #f4f4f4;
-            padding: 1rem;
+            padding: 20px;
             border-radius: 5px;
-            margin-top: 1rem;
+            margin-top: 20px;
         }
         .principle {
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
         }
         .principle h3 {
             color: #1a1a2e;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
         .modal {
             display: none;
@@ -292,23 +287,81 @@
         }
 
         @media (max-width: 768px) {
+            header {
+                padding: 0.5rem 1rem;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                width: 80px;
+                height: 24px;
+                margin: 0;
+            }
+            nav {
+                display: flex;
+            }
+            nav ul {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 0 0 0 1rem;
+            }
+            nav ul li a {
+                font-size: 0.8rem;
+            }
             .section {
-                padding: 1rem;
+                padding: 0.5rem;
+            }
+            #contact form {
+                padding: 0 0.5rem;
             }
             .hero h1 {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
             h2 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
-            .offering-card h3 {
-                font-size: 1rem;
+            .offering-card {
+                margin: 1rem auto;
+                padding: 0.5rem;
+            }
+            .offering-content {
+                padding: 0.25rem;
+            }
+            .offering-plot img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 0.5rem;
+            }
+            .table-container {
+                height: auto;
+                max-height: 120px;
+                overflow-y: auto;
+                margin-bottom: 0.5rem;
             }
             .stats-table {
-                font-size: 0.7rem;
+                font-size: 0.65rem;
+                line-height: 1.2;
             }
-            .principle h3 {
-                font-size: 1rem;
+            .stats-table th, .stats-table td {
+                padding: 0.15rem;
+            }
+            .offering-details p {
+                margin-top: 0.5rem;
+                margin-bottom: 0;
+                font-size: 0.8rem;
+            }
+            button[type="submit"] {
+                width: 60%;
+            }
+            .offering-card h3 {
+                padding: 0.75rem;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -407,7 +460,6 @@
                     </div>
                 </div>
             </div>
-        </section>
         </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
