@@ -133,6 +133,7 @@
             border-radius: 4px;
             max-height: 500px;
             object-fit: contain;
+            cursor: pointer;
         }
         .table-container {
             width: 100%;
@@ -224,6 +225,9 @@
             padding: 0.75rem 1.5rem;
             border-radius: 4px;
             cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            width: 40%;
         }
         button[type="submit"]:hover {
             background-color: #2a2a4e;
@@ -252,6 +256,40 @@
         }
         .linkedin-link:hover {
             text-decoration: underline;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -297,10 +335,12 @@
             .offering-plot img {
                 width: 100%;
                 height: auto;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.25rem;
             }
             .table-container {
-                margin-bottom: 0.5rem;
+                height: 147px;
+                overflow-y: auto;
+                margin-bottom: 0.25rem;
             }
             .stats-table {
                 font-size: 0.8rem;
@@ -312,11 +352,9 @@
                 padding: 1rem;
             }
             .offering-details p {
-                margin-top: 0.5rem;
+                margin-top: 0.25rem;
             }
             button[type="submit"] {
-                display: block;
-                margin: 0 auto;
                 width: 60%;
             }
         }
@@ -378,7 +416,7 @@
                 <h3>Adaptive Long/Short Strategy</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
-                        <img id="long-short-img" src="docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)">
+                        <img id="long-short-img" src="docs/equity_portfolio_performance_(long-short).png" alt="Equity Portfolio Performance (Long-Short)" onclick="openModal(this.src)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longShortStatsTable">
@@ -399,7 +437,7 @@
                 <h3>Dynamic Equity Long-Only Strategy</h3>
                 <div class="offering-content">
                     <div class="offering-plot">
-                        <img id="long-only-img" src="docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)">
+                        <img id="long-only-img" src="docs/equity_portfolio_performance_(long-only).png" alt="Equity Portfolio Performance (Long-Only)" onclick="openModal(this.src)">
                     </div>
                     <div class="table-container">
                         <table class="stats-table" id="longOnlyStatsTable">
@@ -416,7 +454,7 @@
                     </div>
                 </div>
             </div>
-</section>
+        </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <form action="https://formspree.io/f/mwpedldd" method="POST">
@@ -441,6 +479,11 @@
         <p><a href="https://www.linkedin.com/company/mwm-research/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn</a></p>
     </footer>
     <a href="#" id="back-to-top" title="Back to Top">↑</a>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
@@ -569,6 +612,26 @@
             alert("Oops! There was a problem submitting your form");
         });
     });
+
+    // Image modal functionality
+    function openModal(imgSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close the modal when clicking outside the image
+    window.onclick = function(event) {
+        const modal = document.getElementById("imageModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
 
 <script>
