@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MWM Research | Dynamic Portfolio Solutions.</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- New font imports for the logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
 
     <!-- Updated links to icons in the images/ folder -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=3">
@@ -17,8 +20,6 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
     
-    
-
     <!-- PapaParse script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
@@ -294,6 +295,20 @@
             cursor: pointer;
         }
 
+        /* Updated styles for the logo fonts */
+        .main-text { 
+            font-family: 'Lexend Peta', sans-serif; 
+            font-size: 32px; 
+            font-weight: 700; 
+            fill: white; 
+        }
+        .sub-text { 
+            font-family: 'Neue Machina', sans-serif; 
+            font-size: 16px; 
+            fill: #4ecdc4; 
+            letter-spacing: 5px; 
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 0.5rem 1rem;
@@ -379,10 +394,6 @@
     <div class="logo">
         <a href="#hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-                <style>
-                    .main-text { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: white; }
-                    .sub-text { font-family: Arial, sans-serif; font-size: 16px; fill: #4ecdc4; letter-spacing: 5px; }
-                </style>
                 <text x="100" y="28" class="main-text" text-anchor="middle">M<tspan dx="0">W</tspan><tspan dx="0">M</tspan></text>
                 <text x="100" y="50" class="sub-text" text-anchor="middle">RESEARCH</text>
             </svg>
