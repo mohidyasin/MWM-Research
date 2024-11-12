@@ -1,9 +1,9 @@
 {
-    "last_run_date": "2024-11-11 17:18:16",
-    "data_end_date": "2024-11-08",
+    "last_run_date": "2024-11-12 17:18:43",
+    "data_end_date": "2024-11-11",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "1115%",
+            "Cumulative Return": "1116%",
             "CAGR%": "11.36%",
             "Sharpe": "0.81",
             "Max Drawdown": "-27.3%",
@@ -19,7 +19,7 @@
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2776%",
+            "Cumulative Return": "2778%",
             "CAGR%": "15.57%",
             "Sharpe": "0.85",
             "Max Drawdown": "-36.1%",
@@ -36,7 +36,7 @@
     "plot_dimensions": {
         "long_only": {
             "filename": "equity_portfolio_performance_(long-only).png",
-            "width": 4736,
+            "width": 4735,
             "height": 2374
         },
         "long_short": {
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1731345496
+    "timestamp": 1731431923
 }
