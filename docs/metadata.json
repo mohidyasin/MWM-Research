@@ -1,49 +1,49 @@
 {
-    "last_run_date": "2024-12-04 17:20:46",
-    "data_end_date": "2024-12-03",
+    "last_run_date": "2024-12-05 17:20:41",
+    "data_end_date": "2024-12-04",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "1126%",
-            "CAGR%": "11.37%",
+            "Cumulative Return": "1134%",
+            "CAGR%": "11.39%",
             "Sharpe": "0.81",
             "Max Drawdown": "-27.3%",
-            "Volatility (ann.)": "14.63%"
+            "Volatility (ann.)": "14.62%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "407%",
-            "CAGR%": "7.22%",
+            "Cumulative Return": "411%",
+            "CAGR%": "7.25%",
             "Sharpe": "0.46",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.15%"
+            "Volatility (ann.)": "19.14%"
         }
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2803%",
-            "CAGR%": "15.56%",
+            "Cumulative Return": "2821%",
+            "CAGR%": "15.59%",
             "Sharpe": "0.85",
             "Max Drawdown": "-36.1%",
             "Volatility (ann.)": "19.17%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "407%",
-            "CAGR%": "7.22%",
+            "Cumulative Return": "411%",
+            "CAGR%": "7.25%",
             "Sharpe": "0.46",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.15%"
+            "Volatility (ann.)": "19.14%"
         }
     },
     "plot_dimensions": {
         "long_only": {
             "filename": "equity_portfolio_performance_(long-only).png",
-            "width": 4735,
+            "width": 4736,
             "height": 2374
         },
         "long_short": {
             "filename": "equity_portfolio_performance_(long-short).png",
-            "width": 4737,
+            "width": 4736,
             "height": 2374
         }
     },
-    "timestamp": 1733332846
+    "timestamp": 1733419241
 }
