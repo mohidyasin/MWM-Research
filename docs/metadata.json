@@ -1,10 +1,10 @@
 {
-    "last_run_date": "2024-12-15 17:18:18",
-    "data_end_date": "2024-12-12",
+    "last_run_date": "2024-12-16 17:19:04",
+    "data_end_date": "2024-12-13",
     "long_only_stats": {
         "Strategy": {
             "Cumulative Return": "1127%",
-            "CAGR%": "11.36%",
+            "CAGR%": "11.35%",
             "Sharpe": "0.81",
             "Max Drawdown": "-27.3%",
             "Volatility (ann.)": "14.62%"
@@ -14,7 +14,7 @@
             "CAGR%": "7.22%",
             "Sharpe": "0.46",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.14%"
+            "Volatility (ann.)": "19.13%"
         }
     },
     "long_short_stats": {
@@ -30,7 +30,7 @@
             "CAGR%": "7.22%",
             "Sharpe": "0.46",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.14%"
+            "Volatility (ann.)": "19.13%"
         }
     },
     "plot_dimensions": {
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1734283098
+    "timestamp": 1734369544
 }
