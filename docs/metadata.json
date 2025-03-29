@@ -1,10 +1,10 @@
 {
-    "last_run_date": "2025-03-28 17:20:34",
+    "last_run_date": "2025-03-29 17:18:51",
     "data_end_date": "2025-03-28",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "1036%",
-            "CAGR%": "10.85%",
+            "Cumulative Return": "1035%",
+            "CAGR%": "10.84%",
             "Sharpe": "0.78",
             "Max Drawdown": "-27.3%",
             "Volatility (ann.)": "14.57%"
@@ -14,13 +14,13 @@
             "CAGR%": "6.75%",
             "Sharpe": "0.44",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.10%"
+            "Volatility (ann.)": "19.11%"
         }
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2604%",
-            "CAGR%": "15.00%",
+            "Cumulative Return": "2602%",
+            "CAGR%": "14.99%",
             "Sharpe": "0.83",
             "Max Drawdown": "-36.1%",
             "Volatility (ann.)": "19.13%"
@@ -30,7 +30,7 @@
             "CAGR%": "6.75%",
             "Sharpe": "0.44",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.10%"
+            "Volatility (ann.)": "19.11%"
         }
     },
     "plot_dimensions": {
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1743182434
+    "timestamp": 1743268731
 }
