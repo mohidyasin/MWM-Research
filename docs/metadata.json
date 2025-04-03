@@ -1,36 +1,36 @@
 {
-    "last_run_date": "2025-04-02 17:20:34",
-    "data_end_date": "2025-04-02",
+    "last_run_date": "2025-04-03 17:20:27",
+    "data_end_date": "2025-04-03",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "1057%",
-            "CAGR%": "10.93%",
-            "Sharpe": "0.79",
+            "Cumulative Return": "1009%",
+            "CAGR%": "10.73%",
+            "Sharpe": "0.77",
             "Max Drawdown": "-27.3%",
-            "Volatility (ann.)": "14.57%"
+            "Volatility (ann.)": "14.59%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "376%",
-            "CAGR%": "6.83%",
-            "Sharpe": "0.44",
+            "Cumulative Return": "356%",
+            "CAGR%": "6.64%",
+            "Sharpe": "0.43",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.10%"
+            "Volatility (ann.)": "19.12%"
         }
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2655%",
-            "CAGR%": "15.08%",
-            "Sharpe": "0.83",
+            "Cumulative Return": "2540%",
+            "CAGR%": "14.87%",
+            "Sharpe": "0.82",
             "Max Drawdown": "-36.1%",
-            "Volatility (ann.)": "19.13%"
+            "Volatility (ann.)": "19.14%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "376%",
-            "CAGR%": "6.83%",
-            "Sharpe": "0.44",
+            "Cumulative Return": "356%",
+            "CAGR%": "6.64%",
+            "Sharpe": "0.43",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.10%"
+            "Volatility (ann.)": "19.12%"
         }
     },
     "plot_dimensions": {
@@ -41,9 +41,9 @@
         },
         "long_short": {
             "filename": "equity_portfolio_performance_(long-short).png",
-            "width": 4736,
+            "width": 4737,
             "height": 2374
         }
     },
-    "timestamp": 1743614434
+    "timestamp": 1743700827
 }
