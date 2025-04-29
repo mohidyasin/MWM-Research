@@ -1,36 +1,36 @@
 {
-    "last_run_date": "2025-04-28 17:20:27",
-    "data_end_date": "2025-04-28",
+    "last_run_date": "2025-04-29 17:21:35",
+    "data_end_date": "2025-04-29",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "952%",
-            "CAGR%": "10.45%",
-            "Sharpe": "0.75",
+            "Cumulative Return": "965%",
+            "CAGR%": "10.50%",
+            "Sharpe": "0.76",
             "Max Drawdown": "-27.3%",
             "Volatility (ann.)": "14.64%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "359%",
-            "CAGR%": "6.64%",
+            "Cumulative Return": "364%",
+            "CAGR%": "6.70%",
             "Sharpe": "0.43",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.32%"
+            "Volatility (ann.)": "19.31%"
         }
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2264%",
-            "CAGR%": "14.29%",
+            "Cumulative Return": "2293%",
+            "CAGR%": "14.34%",
             "Sharpe": "0.79",
             "Max Drawdown": "-36.1%",
             "Volatility (ann.)": "19.32%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "359%",
-            "CAGR%": "6.64%",
+            "Cumulative Return": "364%",
+            "CAGR%": "6.70%",
             "Sharpe": "0.43",
             "Max Drawdown": "-56.5%",
-            "Volatility (ann.)": "19.32%"
+            "Volatility (ann.)": "19.31%"
         }
     },
     "plot_dimensions": {
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1745860827
+    "timestamp": 1745947295
 }
