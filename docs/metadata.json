@@ -1,5 +1,5 @@
 {
-    "last_run_date": "2025-05-24 17:20:03",
+    "last_run_date": "2025-05-25 17:19:01",
     "data_end_date": "2025-05-23",
     "long_only_stats": {
         "Strategy": {
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1748107203
+    "timestamp": 1748193541
 }
