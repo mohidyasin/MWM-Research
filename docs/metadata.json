@@ -1,6 +1,6 @@
 {
-    "last_run_date": "2025-05-27 17:22:05",
-    "data_end_date": "2025-05-27",
+    "last_run_date": "2025-05-28 17:22:09",
+    "data_end_date": "2025-05-28",
     "long_only_stats": {
         "Strategy": {
             "Cumulative Return": "1038%",
@@ -19,7 +19,7 @@
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2456%",
+            "Cumulative Return": "2457%",
             "CAGR%": "14.61%",
             "Sharpe": "0.80",
             "Max Drawdown": "-36.1%",
@@ -41,9 +41,9 @@
         },
         "long_short": {
             "filename": "equity_portfolio_performance_(long-short).png",
-            "width": 4736,
+            "width": 4737,
             "height": 2374
         }
     },
-    "timestamp": 1748366525
+    "timestamp": 1748452929
 }
