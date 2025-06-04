@@ -1,6 +1,6 @@
 {
-    "last_run_date": "2025-06-03 17:23:28",
-    "data_end_date": "2025-06-03",
+    "last_run_date": "2025-06-04 17:22:56",
+    "data_end_date": "2025-06-04",
     "long_only_stats": {
         "Strategy": {
             "Cumulative Return": "1051%",
@@ -19,7 +19,7 @@
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2485%",
+            "Cumulative Return": "2486%",
             "CAGR%": "14.65%",
             "Sharpe": "0.81",
             "Max Drawdown": "-36.1%",
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1748971408
+    "timestamp": 1749057776
 }
