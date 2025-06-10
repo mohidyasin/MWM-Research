@@ -1,17 +1,17 @@
 {
-    "last_run_date": "2025-06-09 17:21:30",
-    "data_end_date": "2025-06-09",
+    "last_run_date": "2025-06-10 17:22:13",
+    "data_end_date": "2025-06-10",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "1057%",
-            "CAGR%": "10.84%",
+            "Cumulative Return": "1061%",
+            "CAGR%": "10.85%",
             "Sharpe": "0.78",
             "Max Drawdown": "-27.3%",
             "Volatility (ann.)": "14.64%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "404%",
-            "CAGR%": "7.04%",
+            "Cumulative Return": "406%",
+            "CAGR%": "7.05%",
             "Sharpe": "0.45",
             "Max Drawdown": "-56.5%",
             "Volatility (ann.)": "19.30%"
@@ -19,15 +19,15 @@
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2500%",
-            "CAGR%": "14.67%",
+            "Cumulative Return": "2508%",
+            "CAGR%": "14.68%",
             "Sharpe": "0.81",
             "Max Drawdown": "-36.1%",
             "Volatility (ann.)": "19.30%"
         },
         "Buy & Hold": {
-            "Cumulative Return": "404%",
-            "CAGR%": "7.04%",
+            "Cumulative Return": "406%",
+            "CAGR%": "7.05%",
             "Sharpe": "0.45",
             "Max Drawdown": "-56.5%",
             "Volatility (ann.)": "19.30%"
@@ -41,9 +41,9 @@
         },
         "long_short": {
             "filename": "equity_portfolio_performance_(long-short).png",
-            "width": 4737,
+            "width": 4736,
             "height": 2374
         }
     },
-    "timestamp": 1749489690
+    "timestamp": 1749576133
 }
