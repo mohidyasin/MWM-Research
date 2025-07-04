@@ -1,5 +1,5 @@
 {
-    "last_run_date": "2025-07-03 17:24:18",
+    "last_run_date": "2025-07-04 17:21:40",
     "data_end_date": "2025-07-03",
     "long_only_stats": {
         "Strategy": {
@@ -19,7 +19,7 @@
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2606%",
+            "Cumulative Return": "2608%",
             "CAGR%": "14.82%",
             "Sharpe": "0.82",
             "Max Drawdown": "-36.1%",
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1751563458
+    "timestamp": 1751649700
 }
