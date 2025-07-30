@@ -1,6 +1,6 @@
 {
-    "last_run_date": "2025-07-29 17:27:02",
-    "data_end_date": "2025-07-29",
+    "last_run_date": "2025-07-30 17:26:58",
+    "data_end_date": "2025-07-30",
     "long_only_stats": {
         "Strategy": {
             "Cumulative Return": "1126%",
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1753810022
+    "timestamp": 1753896418
 }
