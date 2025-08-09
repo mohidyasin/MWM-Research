@@ -1,9 +1,9 @@
 {
-    "last_run_date": "2025-08-08 17:21:07",
+    "last_run_date": "2025-08-09 17:21:37",
     "data_end_date": "2025-08-08",
     "long_only_stats": {
         "Strategy": {
-            "Cumulative Return": "1127%",
+            "Cumulative Return": "1128%",
             "CAGR%": "11.03%",
             "Sharpe": "0.79",
             "Max Drawdown": "-27.3%",
@@ -19,8 +19,8 @@
     },
     "long_short_stats": {
         "Strategy": {
-            "Cumulative Return": "2656%",
-            "CAGR%": "14.84%",
+            "Cumulative Return": "2659%",
+            "CAGR%": "14.85%",
             "Sharpe": "0.82",
             "Max Drawdown": "-36.1%",
             "Volatility (ann.)": "19.25%"
@@ -45,5 +45,5 @@
             "height": 2374
         }
     },
-    "timestamp": 1754673667
+    "timestamp": 1754760097
 }
